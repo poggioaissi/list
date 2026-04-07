@@ -363,40 +363,26 @@ ul { list-style: none; }
 </head>
 <body>
 
-<!-- HERO -->
 <div id="top" class="hero">
-  <!-- Camper SVG logo extracted from PDF -->
   <svg class="camper-logo" viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Poggio a Issi — Camper Logo">
-    <!-- Ground shadow -->
     <ellipse cx="100" cy="122" rx="90" ry="6" fill="rgba(0,0,0,0.15)"/>
-    <!-- Camper body -->
     <rect x="18" y="55" width="148" height="58" rx="8" fill="#c8d8b0"/>
-    <!-- Camper front cab -->
     <rect x="152" y="68" width="30" height="45" rx="5" fill="#b8cc9c"/>
-    <!-- Cab windshield -->
     <rect x="155" y="72" width="22" height="20" rx="3" fill="rgba(255,255,255,0.5)"/>
-    <!-- Side windows -->
     <rect x="28" y="65" width="28" height="20" rx="3" fill="rgba(255,255,255,0.5)"/>
     <rect x="62" y="65" width="28" height="20" rx="3" fill="rgba(255,255,255,0.5)"/>
-    <!-- Door -->
     <rect x="118" y="68" width="26" height="32" rx="3" fill="rgba(0,0,0,0.08)"/>
     <circle cx="141" cy="84" r="2" fill="rgba(0,0,0,0.2)"/>
-    <!-- Roof stripe -->
     <rect x="18" y="55" width="164" height="7" rx="3" fill="rgba(255,255,255,0.2)"/>
-    <!-- Wheels -->
     <circle cx="50" cy="117" r="12" fill="#3a3a3a"/>
     <circle cx="50" cy="117" r="6" fill="#6a6a6a"/>
     <circle cx="50" cy="117" r="2" fill="#aaa"/>
     <circle cx="148" cy="117" r="12" fill="#3a3a3a"/>
     <circle cx="148" cy="117" r="6" fill="#6a6a6a"/>
     <circle cx="148" cy="117" r="2" fill="#aaa"/>
-    <!-- Hitch -->
     <rect x="12" y="110" width="8" height="4" rx="2" fill="#555"/>
-    <!-- Lettering on top -->
     <text x="100" y="48" font-family="'DM Serif Display', Georgia, serif" font-size="13" fill="rgba(255,255,255,0.9)" text-anchor="middle" font-weight="bold" letter-spacing="2">POGGIO A ISSI</text>
-    <!-- Decorative line -->
     <line x1="30" y1="52" x2="170" y2="52" stroke="rgba(255,255,255,0.4)" stroke-width="1" stroke-dasharray="4 3"/>
-    <!-- Awning stripes on camper body -->
     <path d="M28 75 L56 75" stroke="rgba(122,170,80,0.5)" stroke-width="1.5"/>
     <path d="M28 80 L56 80" stroke="rgba(122,170,80,0.5)" stroke-width="1.5"/>
   </svg>
@@ -410,7 +396,6 @@ ul { list-style: none; }
     <span class="hero-chip">🍸 Mixology</span>
   </div>
 
-  <!-- MEAL SWITCHER -->
   <div class="meal-switcher-wrap">
     <div class="meal-switcher">
       <button class="meal-btn active" data-meal="pranzo" onclick="switchMeal('pranzo')">
@@ -419,14 +404,15 @@ ul { list-style: none; }
       <button class="meal-btn" data-meal="cena" onclick="switchMeal('cena')">
         <span class="meal-icon">🌙</span>Cena
       </button>
+      <button class="meal-btn" data-meal="bevande" onclick="switchMeal('bevande')">
+        <span class="meal-icon">🍸</span>Bevande
+      </button>
     </div>
   </div>
 </div>
 
-<!-- STICKY NAV -->
 <nav class="sticky-nav" aria-label="Navigazione menù">
   <div class="sticky-nav-inner" id="navInner">
-    <!-- Pranzo tabs -->
     <span class="nav-group" data-meal="pranzo">
       <button class="nav-tab active" data-target="ll-condividi">Condividi</button>
       <button class="nav-tab" data-target="ll-primi">Primi</button>
@@ -434,7 +420,6 @@ ul { list-style: none; }
       <button class="nav-tab" data-target="ll-griglia">Griglia</button>
       <button class="nav-tab" data-target="ll-contorni">Contorni</button>
     </span>
-    <!-- Cena tabs (hidden by default) -->
     <span class="nav-group hidden" data-meal="cena">
       <button class="nav-tab" data-target="condividi">Condividi</button>
       <button class="nav-tab" data-target="primi">Primi Piatti</button>
@@ -444,23 +429,22 @@ ul { list-style: none; }
       <button class="nav-tab" data-target="insalatone">Insalatone</button>
       <button class="nav-tab" data-target="contorni">Contorni</button>
     </span>
-    <!-- Always visible tabs -->
+    <span class="nav-group hidden" data-meal="bevande">
+      <button class="nav-tab" data-target="caffe">Caffè</button>
+      <button class="nav-tab" data-target="cocktail">Cocktail</button>
+      <button class="nav-tab" data-target="gin">Gin Tonic</button>
+      <button class="nav-tab" data-target="vini">Vini</button>
+      <button class="nav-tab" data-target="birre">Birre</button>
+    </span>
     <button class="nav-tab" data-target="dolci">Dolci</button>
-    <button class="nav-tab" data-target="caffe">Caffè</button>
-    <button class="nav-tab" data-target="cocktail">Cocktail</button>
-    <button class="nav-tab" data-target="gin">Gin Tonic</button>
-    <button class="nav-tab" data-target="vini">Vini</button>
-    <button class="nav-tab" data-target="birre">Birre</button>
     <button class="nav-tab" data-target="allergeni">⚠️</button>
   </div>
 </nav>
 
 <main class="main">
 
-<!-- ================= PRANZO PANEL ================= -->
 <div class="meal-panel active" id="panel-pranzo">
 
-  <!-- LIGHT LUNCH CONDIVIDI -->
   <section class="menu-section" id="ll-condividi">
     <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
       <span class="section-icon">🥗</span>
@@ -482,7 +466,6 @@ ul { list-style: none; }
     </div>
   </section>
 
-  <!-- LIGHT LUNCH PRIMI -->
   <section class="menu-section" id="ll-primi">
     <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
       <span class="section-icon">🍝</span>
@@ -503,7 +486,6 @@ ul { list-style: none; }
     </div>
   </section>
 
-  <!-- LIGHT LUNCH INSALATONE -->
   <section class="menu-section" id="ll-insalatone">
     <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
       <span class="section-icon">🥬</span>
@@ -523,7 +505,6 @@ ul { list-style: none; }
     </div>
   </section>
 
-  <!-- LIGHT LUNCH GRIGLIA -->
   <section class="menu-section" id="ll-griglia">
     <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
       <span class="section-icon">🔥</span>
@@ -545,7 +526,6 @@ ul { list-style: none; }
     </div>
   </section>
 
-  <!-- LIGHT LUNCH CONTORNI -->
   <section class="menu-section" id="ll-contorni">
     <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
       <span class="section-icon">🥔</span>
@@ -565,13 +545,8 @@ ul { list-style: none; }
     </div>
   </section>
 
-</div><!-- /panel-pranzo -->
+</div><div class="meal-panel" id="panel-cena">
 
-
-<!-- ================= CENA PANEL ================= -->
-<div class="meal-panel" id="panel-cena">
-
-  <!-- CONDIVIDI -->
   <section class="menu-section" id="condividi">
     <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
       <span class="section-icon">🥗</span>
@@ -600,7 +575,6 @@ ul { list-style: none; }
     </div>
   </section>
 
-  <!-- PRIMI (cena) -->
   <section class="menu-section" id="primi">
     <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
       <span class="section-icon">🍝</span>
@@ -621,7 +595,6 @@ ul { list-style: none; }
     </div>
   </section>
 
-  <!-- HAMBURGER -->
   <section class="menu-section" id="hamburger">
     <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
       <span class="section-icon">🍔</span>
@@ -648,7 +621,6 @@ ul { list-style: none; }
     </div>
   </section>
 
-  <!-- PINSE -->
   <section class="menu-section" id="pinse">
     <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
       <span class="section-icon">🍕</span>
@@ -679,7 +651,6 @@ ul { list-style: none; }
     </div>
   </section>
 
-  <!-- GRIGLIA (cena) -->
   <section class="menu-section" id="griglia">
     <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
       <span class="section-icon">🔥</span>
@@ -705,7 +676,6 @@ ul { list-style: none; }
     </div>
   </section>
 
-  <!-- INSALATONE (cena) -->
   <section class="menu-section" id="insalatone">
     <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
       <span class="section-icon">🥬</span>
@@ -725,7 +695,6 @@ ul { list-style: none; }
     </div>
   </section>
 
-  <!-- CONTORNI (cena) -->
   <section class="menu-section" id="contorni">
     <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
       <span class="section-icon">🥔</span>
@@ -745,12 +714,335 @@ ul { list-style: none; }
     </div>
   </section>
 
-</div><!-- /panel-cena -->
+</div>
+<div class="meal-panel" id="panel-bevande">
 
-<!-- ================= SHARED SECTIONS ================= -->
+  <section class="menu-section" id="caffe">
+    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
+      <span class="section-icon">☕</span>
+      <span class="section-title">Caffetteria &amp; Digestivi</span>
+      <span class="section-badge">Caffè · Amari · Distillati</span>
+      <span class="section-chevron">▾</span>
+    </button>
+    <div class="section-body">
+      <div class="section-body-inner">
+        <h3 class="sub-title">☕ Caffetteria</h3>
+        <div class="simple-list">
+          <div class="simple-item"><span class="simple-item-name">Caffè espresso</span><span class="simple-item-price">2€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Cappuccino</span><span class="simple-item-price">3€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Caffè Americano</span><span class="simple-item-price">3€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Caffè Latte / Latte Macchiato</span><span class="simple-item-price">3€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Tè Caldo / Tisana</span><span class="simple-item-price">3€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Caffè Shakerato</span><span class="simple-item-price">4€</span></div>
+        </div>
+        <h3 class="sub-title">🍇 Grappe</h3>
+        <div class="simple-list">
+          <div class="simple-item"><span class="simple-item-name">Grappa di Vernaccia "Il Colombaio"</span><span class="simple-item-price">5€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Grappa Riserva "Il Colombaio"</span><span class="simple-item-price">7€</span></div>
+        </div>
+        <h3 class="sub-title">🌿 Amari</h3>
+        <div class="simple-list">
+          <div class="simple-item"><span class="simple-item-name">Amaro del Capo</span><span class="simple-item-price">4€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Fernet Branca</span><span class="simple-item-price">4€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Jägermeister</span><span class="simple-item-price">4€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Montenegro</span><span class="simple-item-price">4€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Jefferson</span><span class="simple-item-price">5€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Amari Artigianali</span><span class="simple-item-price">5€</span></div>
+        </div>
+        <h3 class="sub-title">🍬 Liquori</h3>
+        <div class="simple-list">
+          <div class="simple-item"><span class="simple-item-name">Sambuca</span><span class="simple-item-price">4€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Love Kam. — Caramello Salato</span><span class="simple-item-price">4€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Baileys</span><span class="simple-item-price">4€</span></div>
+          <div class="simple-item"><span class="simple-item-name">PATRON XO — Liquore al Caffè</span><span class="simple-item-price">5€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Amaretto di Saronno</span><span class="simple-item-price">4€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Limoncello</span><span class="simple-item-price">4€</span></div>
+        </div>
+        <h3 class="sub-title">🥃 Whisky</h3>
+        <div class="simple-list">
+          <div class="simple-item"><span class="simple-item-name">Nikka from the Barrel</span><span class="simple-item-price">12€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Macallan 12</span><span class="simple-item-price">12€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Laphroaig 10</span><span class="simple-item-price">9€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Wild Turkey 101</span><span class="simple-item-price">8€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Bulleit Rye</span><span class="simple-item-price">6€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Bulleit Bourbon</span><span class="simple-item-price">5€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Dewar's</span><span class="simple-item-price">5€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Jack Daniel's</span><span class="simple-item-price">4€</span></div>
+        </div>
+        <h3 class="sub-title">🌵 Agave &amp; Rum</h3>
+        <div class="simple-list">
+          <div class="simple-item"><span class="simple-item-name">Tequila Patron Reposado</span><span class="simple-item-price">10€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Tequila Patron Silver</span><span class="simple-item-price">8€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Mezcal Ilegal</span><span class="simple-item-price">8€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Don Papa Rum</span><span class="simple-item-price">10€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Diplomatico</span><span class="simple-item-price">9€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Zacapa 23</span><span class="simple-item-price">8€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Santa Teresa</span><span class="simple-item-price">8€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Bumbu</span><span class="simple-item-price">7€</span></div>
+        </div>
+        <h3 class="sub-title">✨ Altro</h3>
+        <div class="simple-list">
+          <div class="simple-item"><span class="simple-item-name">Grey Goose Vodka</span><span class="simple-item-price">8€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Vecchia Romagna</span><span class="simple-item-price">4€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Courvoisier VSOP</span><span class="simple-item-price">8€</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- DOLCI -->
-<section class="menu-section" id="dolci">
+  <section class="menu-section" id="cocktail">
+    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
+      <span class="section-icon">🍸</span>
+      <span class="section-title">Cocktail</span>
+      <span class="section-badge">Classici · Premium</span>
+      <span class="section-chevron">▾</span>
+    </button>
+    <div class="section-body">
+      <div class="section-body-inner">
+        <h3 class="sub-title">Classici</h3>
+        <div class="dish-grid">
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Sprissi</span><span class="dish-price">9€</span></div><p class="dish-desc">Bitter Martini Riserva, pompelmo rosa Dandy, Spumante Lumis</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Spritz Aperol / Campari</span><span class="dish-price">8€</span></div><p class="dish-desc">Il classico aperitivo italiano</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Hugo Spritz</span><span class="dish-price">10€</span></div><p class="dish-desc">St. Germain (sambuco), prosecco, soda, menta fresca</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Americano</span><span class="dish-price">8€</span></div><p class="dish-desc">Bitter Martini Riserva, Vermouth rosso Martini, soda</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Negroni</span><span class="dish-price">8€</span></div><p class="dish-desc">Bombay Sapphire, Bitter Martini Riserva, Vermouth rosso Martini</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Basil Smash</span><span class="dish-price">10€</span></div><p class="dish-desc">Bombay Sapphire, limone, zucchero, basilico fresco</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Paloma</span><span class="dish-price">10€</span></div><p class="dish-desc">Tequila Cazadores, lime, sciroppo d'agave, pompelmo rosa Dandy, crusta di sale</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Margarita</span><span class="dish-price">10€</span></div><p class="dish-desc">Tequila Cazadores, Triplesec, lime, sciroppo d'agave</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Mojito</span><span class="dish-price">10€</span></div><p class="dish-desc">Rum Bacardi Carta Blanca, lime, menta fresca, zucchero, soda</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Tropical Daiquiri Frozen</span><span class="dish-price">10€</span></div><p class="dish-desc">Rum Bacardi Carta Blanca, lime, purea di mango e passion fruit</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Piña Colada</span><span class="dish-price">10€</span></div><p class="dish-desc">Rum Bacardi Carta Oro, ananas, cocco, lime</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Moscow Mule</span><span class="dish-price">10€</span></div><p class="dish-desc">Vodka Eristoff, lime, Ginger Beer Dandy</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Whisky Sour</span><span class="dish-price">10€</span></div><p class="dish-desc">Bulleit Rye, limone, zucchero, foamer</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Fernandito</span><span class="dish-price">8€</span></div><p class="dish-desc">Fernet Branca, Coca Cola, lime</p></div>
+        </div>
+
+        <h3 class="sub-title">🌟 I Premium del Poggio</h3>
+        <div class="dish-grid">
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Sua Maestà il Martini</span><span class="dish-price">12€</span></div><p class="dish-desc">Frantuono gin all'olio d'oliva, Vermouth ambrato Martini Riserva, olive</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Negroni Fumé</span><span class="dish-price">12€</span></div><p class="dish-desc">Maite Fiamma Gin, Mezcal, Bitter Martini Riserva, Vermouth Martini Rubino Riserva, rosmarino affumicato</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Spicy Paloma</span><span class="dish-price">12€</span></div><p class="dish-desc">Tequila Patron Reposado, liquore allo Jalapeño, lime, agave, pompelmo rosa Dandy, tabasco verde</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Issi Margarita</span><span class="dish-price">12€</span></div><p class="dish-desc">Tequila Patron Reposado, Mezcal, lime, sciroppo d'agave</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Jungle Bird</span><span class="dish-price">12€</span></div><p class="dish-desc">Rum Jamaicano, bitter fusetti alla banana, ananas, zucchero, lime</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Espresso Mentini</span><span class="dish-price">12€</span></div><p class="dish-desc">Grey Goose Vodka, caffè espresso, Patron XO, zucchero, menta fresca</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Issi Sour</span><span class="dish-price">12€</span></div><p class="dish-desc">Wild Turkey 101 Bourbon, limone, zucchero, Chianti di San Gimignano, foamer</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Paper Plane</span><span class="dish-price">12€</span></div><p class="dish-desc">Bulleit Bourbon, limone, Aperol, Amaro Jefferson</p></div>
+        </div>
+
+        <h3 class="sub-title">🍃 Analcolici</h3>
+        <div class="simple-list">
+          <div class="simple-item"><span class="simple-item-name">Sprissi Zero — Bitter Martini Vibrante, soda pompelmo</span><span class="simple-item-price">7€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Il Floreale — Bitter Martini Floreale, mela verde, soda</span><span class="simple-item-price">7€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Il Fruttato — Arancia, ananas, granatina</span><span class="simple-item-price">6€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Mojito Zero — Lime, menta, ginger beer, soda</span><span class="simple-item-price">8€</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-section" id="gin">
+    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
+      <span class="section-icon">🫙</span>
+      <span class="section-title">Gin Tonic — Selezione del Gingegnere</span>
+      <span class="section-badge">20 gin</span>
+      <span class="section-chevron">▾</span>
+    </button>
+    <div class="section-body">
+      <div class="section-body-inner">
+        <p class="section-note">Tutti i gin sono serviti con tonica artigianale italiana "Dandy Classic Touch" — disponibile anche "Dandy Zero Zuccheri"</p>
+        <div class="gin-list">
+          <div class="gin-item"><span class="gin-num">1</span><div class="gin-info"><span class="gin-name">Bombay Dry</span><span class="gin-profile">Secco, classico, pulito</span></div><span class="gin-price">8€</span></div>
+          <div class="gin-item"><span class="gin-num">2</span><div class="gin-info"><span class="gin-name">Bombay Sapphire</span><span class="gin-profile">Secco, speziato, leggermente agrumato e floreale</span></div><span class="gin-price">9€</span></div>
+          <div class="gin-item"><span class="gin-num">3</span><div class="gin-info"><span class="gin-name">Tanqueray Ten</span><span class="gin-profile">Secco, pulito, classico, agrumato</span></div><span class="gin-price">10€</span></div>
+          <div class="gin-item"><span class="gin-num">4</span><div class="gin-info"><span class="gin-name">Monkey 47</span><span class="gin-profile">Complesso, morbido, speziato, elegante</span></div><span class="gin-price">14€</span></div>
+          <div class="gin-item"><span class="gin-num">5</span><div class="gin-info"><span class="gin-name">Ciauru Gin — Pompelmo Rosa</span><span class="gin-profile">Fresco, estivo, pompelmo rosa vero</span></div><span class="gin-price">10€</span></div>
+          <div class="gin-item"><span class="gin-num">6</span><div class="gin-info"><span class="gin-name">Rame Italian Dry</span><span class="gin-profile">Mediterraneo, aromatico, leggermente agrumato</span></div><span class="gin-price">10€</span></div>
+          <div class="gin-item"><span class="gin-num">7</span><div class="gin-info"><span class="gin-name">Rame London Dry</span><span class="gin-profile">Secco, speziato, pepato</span></div><span class="gin-price">10€</span></div>
+          <div class="gin-item"><span class="gin-num">8</span><div class="gin-info"><span class="gin-name">Piero Dry Gin</span><span class="gin-profile">Morbido, elegante, speziato</span></div><span class="gin-price">12€</span></div>
+          <div class="gin-item"><span class="gin-num">9</span><div class="gin-info"><span class="gin-name">Barbarasa London Dry</span><span class="gin-profile">Secco, aromatico, agrumato</span></div><span class="gin-price">10€</span></div>
+          <div class="gin-item"><span class="gin-num">10</span><div class="gin-info"><span class="gin-name">Barbarasa Navy</span><span class="gin-profile">Secco, deciso, molto agrumato</span></div><span class="gin-price">12€</span></div>
+          <div class="gin-item"><span class="gin-num">11</span><div class="gin-info"><span class="gin-name">Maite Spiaggialunga</span><span class="gin-profile">Aromatico, mediterraneo, leggermente speziato</span></div><span class="gin-price">12€</span></div>
+          <div class="gin-item"><span class="gin-num">12</span><div class="gin-info"><span class="gin-name">Maite Fiamma</span><span class="gin-profile">Secco, complesso, leggermente affumicato</span></div><span class="gin-price">12€</span></div>
+          <div class="gin-item"><span class="gin-num">13</span><div class="gin-info"><span class="gin-name">Upperhand</span><span class="gin-profile">Fresco, estivo, morbido — sentori di basilico e limone</span></div><span class="gin-price">10€</span></div>
+          <div class="gin-item"><span class="gin-num">14</span><div class="gin-info"><span class="gin-name">Hendrick's</span><span class="gin-profile">Fresco, aromatico, floreale</span></div><span class="gin-price">10€</span></div>
+          <div class="gin-item"><span class="gin-num">15</span><div class="gin-info"><span class="gin-name">Nordés</span><span class="gin-profile">Morbido, fresco, fruttato</span></div><span class="gin-price">10€</span></div>
+          <div class="gin-item"><span class="gin-num">16</span><div class="gin-info"><span class="gin-name">J Rose</span><span class="gin-profile">Floreale, fruttato, leggermente agrumato e speziato</span></div><span class="gin-price">12€</span></div>
+          <div class="gin-item"><span class="gin-num">17</span><div class="gin-info"><span class="gin-name">Poseidon</span><span class="gin-profile">Marino, fresco, agrumato</span></div><span class="gin-price">12€</span></div>
+          <div class="gin-item"><span class="gin-num">18</span><div class="gin-info"><span class="gin-name">Brockman's</span><span class="gin-profile">Morbido, frutti rossi</span></div><span class="gin-price">10€</span></div>
+          <div class="gin-item"><span class="gin-num">19</span><div class="gin-info"><span class="gin-name">Arigatuono</span><span class="gin-profile">Stile giapponese — elegante, pulito, agrumato, speziato</span></div><span class="gin-price">12€</span></div>
+          <div class="gin-item"><span class="gin-num">20</span><div class="gin-info"><span class="gin-name">Frantuono</span><span class="gin-profile">Morbido, delicato, mediterraneo — sentori di oliva</span></div><span class="gin-price">12€</span></div>
+        </div>
+        <p class="section-note" style="margin-top: 0.85rem;">Abbiamo molti altri gin in costante aggiornamento — chiedi al Gingegnere! 10€</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-section" id="vini">
+    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
+      <span class="section-icon">🍷</span>
+      <span class="section-title">Carta dei Vini</span>
+      <span class="section-badge">La nostra cantina</span>
+      <span class="section-chevron">▾</span>
+    </button>
+    <div class="section-body">
+      <div class="section-body-inner">
+        
+        <div class="sub-accordion">
+          <button class="sub-trigger" onclick="toggleSub(this)" aria-expanded="false">
+            <span class="sub-trigger-title">Bollicine</span>
+            <span class="sub-trigger-chevron">▾</span>
+          </button>
+          <div class="sub-body">
+            <div class="sub-body-inner">
+              <div class="wine-list">
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Spumante Brut "Lumis"</div><div class="wine-producer">Il Colombaio · 80% Vernaccia 20% Chardonnay</div></div><div class="wine-price">24€ / 6€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Spumante Brut "Lumis" Magnum</div><div class="wine-producer">Il Colombaio · 80% Vernaccia 20% Chardonnay</div></div><div class="wine-price">54€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Spumante Brut "Lumis" Rosé</div><div class="wine-producer">Il Colombaio · 100% Sangiovese</div></div><div class="wine-price">26€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Altalanga Extra Brut</div><div class="wine-producer">Ettore Germano · 80% Pinot Nero 20% Chardonnay</div></div><div class="wine-price">40€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Trento DOC "Perlè"</div><div class="wine-producer">Ferrari · 100% Chardonnay</div></div><div class="wine-price">60€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Crémant d'Alsace Millésime Brut</div><div class="wine-producer">Dirler-Cadé · Pinot Nero / Pinot Gris / Auxerrois</div></div><div class="wine-price">40€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Champagne "Zero"</div><div class="wine-producer">Tarlant · Pinot Nero / Chardonnay / Meunier / Petit Meslier</div></div><div class="wine-price">95€</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-accordion">
+          <button class="sub-trigger" onclick="toggleSub(this)" aria-expanded="false">
+            <span class="sub-trigger-title">Bianchi</span>
+            <span class="sub-trigger-chevron">▾</span>
+          </button>
+          <div class="sub-body">
+            <div class="sub-body-inner">
+              <div class="wine-list">
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">IGT Toscana "Fonteuva" Bianco</div><div class="wine-producer">Il Colombaio di Santa Chiara · Vernaccia, Vermentino, Malvasia</div></div><div class="wine-price">18€ / 5€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Vernaccia di SG DOCG "Selvabianca"</div><div class="wine-producer">Il Colombaio di Santa Chiara · 100% Vernaccia</div></div><div class="wine-price">24€ / 6€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Vernaccia di SG DOCG "Albereta"</div><div class="wine-producer">Il Colombaio di Santa Chiara · 100% Vernaccia</div></div><div class="wine-price">46€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Soave Classico DOC</div><div class="wine-producer">Pieropan · 85% Garganega 15% Trebbiano</div></div><div class="wine-price">24€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Lugana DOC "Capotesta"</div><div class="wine-producer">Cascina Maddalena · 100% Turbiana</div></div><div class="wine-price">26€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Vermentino Colli di Luni DOC</div><div class="wine-producer">Ottaviano Lambruschi · 100% Vermentino</div></div><div class="wine-price">26€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Fiano Avellino DOCG</div><div class="wine-producer">Colli di Lapio · 100% Fiano di Avellino</div></div><div class="wine-price">28€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Alto Adige Valle Isarco "Kerner"</div><div class="wine-producer">Taschlerhof · 100% Kerner</div></div><div class="wine-price">28€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Alto Adige Chardonnay "Schwarzhaus"</div><div class="wine-producer">Stroblhof · 100% Chardonnay</div></div><div class="wine-price">30€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Riesling Wehlener Sonnenuhr Spätlese</div><div class="wine-producer">Kerpen · 100% Riesling</div></div><div class="wine-price">30€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Alto Adige Sauvignon "Nico"</div><div class="wine-producer">Stroblhof · 100% Sauvignon</div></div><div class="wine-price">32€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Alto Adige Valle Isarco "Gewurztraminer"</div><div class="wine-producer">Taschlerhof · 100% Gewurztraminer</div></div><div class="wine-price">32€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Etna Bianco DOC</div><div class="wine-producer">Benanti · 100% Carricante</div></div><div class="wine-price">33€</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-accordion">
+          <button class="sub-trigger" onclick="toggleSub(this)" aria-expanded="false">
+            <span class="sub-trigger-title">Rossi</span>
+            <span class="sub-trigger-chevron">▾</span>
+          </button>
+          <div class="sub-body">
+            <div class="sub-body-inner">
+              <div class="wine-list">
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">IGT Toscana Rosso "Fonteuva"</div><div class="wine-producer">Il Colombaio · 100% Sangiovese</div></div><div class="wine-price">18€ / 5€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Chianti CS DOCG "Campale"</div><div class="wine-producer">Il Colombaio · 90% Sangiovese 10% Merlot</div></div><div class="wine-price">24€ / 6€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Ciliegiolo IGT</div><div class="wine-producer">Antonio Camillo · 100% Ciliegiolo</div></div><div class="wine-price">24€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Nebbiolo Langhe DOC</div><div class="wine-producer">Ettore Germano · 100% Nebbiolo</div></div><div class="wine-price">26€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Pinot Nero</div><div class="wine-producer">Panizzi · 100% Pinot Nero</div></div><div class="wine-price">28€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Rosso di Montalcino DOC</div><div class="wine-producer">Castello Tricerchi · 100% Sangiovese</div></div><div class="wine-price">32€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Chianti Classico</div><div class="wine-producer">Riecine · 100% Sangiovese</div></div><div class="wine-price">35€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Chianti CS Riserva DOCG "Il Priore"</div><div class="wine-producer">Il Colombaio · 90% Sangiovese 10% Canaiolo</div></div><div class="wine-price">36€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Bolgheri Rosso DOC</div><div class="wine-producer">Le Macchiole · Merlot / Cab Franc / Cab Sauvignon / Syrah</div></div><div class="wine-price">38€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Etna Rosso DOC</div><div class="wine-producer">Tenuta delle Terre Nere · 100% Nerello Mascalese</div></div><div class="wine-price">45€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Chianti CL Riserva DOCG "Vigna Barbischio"</div><div class="wine-producer">Maurizio Alongi · 100% Sangiovese</div></div><div class="wine-price">48€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Brunello di Montalcino DOCG</div><div class="wine-producer">Castello Tricerchi · 100% Sangiovese</div></div><div class="wine-price">66€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Cabernet Franc IGT "Bacicolo"</div><div class="wine-producer">Il Colombaio · 100% Cabernet Franc</div></div><div class="wine-price">80€</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-accordion">
+          <button class="sub-trigger" onclick="toggleSub(this)" aria-expanded="false">
+            <span class="sub-trigger-title">Rosati</span>
+            <span class="sub-trigger-chevron">▾</span>
+          </button>
+          <div class="sub-body">
+            <div class="sub-body-inner">
+              <div class="wine-list">
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Rosé IGT "Cremisi"</div><div class="wine-producer">Il Colombaio · 100% Sangiovese</div></div><div class="wine-price">24€ / 6€</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-accordion">
+          <button class="sub-trigger" onclick="toggleSub(this)" aria-expanded="false">
+            <span class="sub-trigger-title">Vini da Dessert</span>
+            <span class="sub-trigger-chevron">▾</span>
+          </button>
+          <div class="sub-body">
+            <div class="sub-body-inner">
+              <div class="wine-list">
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Moscato d'Asti DOCG "Camp Blanc"</div><div class="wine-producer">Emidio Vada · 100% Moscato Bianco di Cannelli</div></div><div class="wine-price">26€</div></div>
+                <div class="wine-item"><div class="wine-info"><div class="wine-name">Passito di Pantelleria DOC "Ben Ryé"</div><div class="wine-producer">Donna Fugata · 100% Zibibbo</div></div><div class="wine-price">65€</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-section" id="birre">
+    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
+      <span class="section-icon">🍺</span>
+      <span class="section-title">Birre &amp; Bevande</span>
+      <span class="section-badge">Birre · Soft Drink</span>
+      <span class="section-chevron">▾</span>
+    </button>
+    <div class="section-body">
+      <div class="section-body-inner">
+        <h3 class="sub-title">🍺 Birre alla Spina</h3>
+        <div class="simple-list">
+          <div class="simple-item"><span class="simple-item-name">Raffo Grezza — Grande</span><span class="simple-item-price">6€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Raffo Grezza — Piccola</span><span class="simple-item-price">4€</span></div>
+        </div>
+        <h3 class="sub-title">🍶 Birrificio San Gimignano</h3>
+        <div class="simple-list">
+          <div class="simple-item"><span class="simple-item-name">Sigeric — Blonde</span><span class="simple-item-price">6,5€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Strade — Blanche</span><span class="simple-item-price">6,5€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Roma — IPA</span><span class="simple-item-price">6,5€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Divago — Amber</span><span class="simple-item-price">6,5€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Nikulas — Tripel</span><span class="simple-item-price">6,5€</span></div>
+        </div>
+        <h3 class="sub-title">🍶 Bottiglie 33cl</h3>
+        <div class="simple-list">
+          <div class="simple-item"><span class="simple-item-name">Menabrea</span><span class="simple-item-price">4€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Corona</span><span class="simple-item-price">4€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Beck's</span><span class="simple-item-price">4€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Ceres</span><span class="simple-item-price">4,5€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Tennent's</span><span class="simple-item-price">4,5€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Corona Analcolica</span><span class="simple-item-price">4€</span></div>
+        </div>
+        <h3 class="sub-title">💧 Acqua &amp; Soft Drink</h3>
+        <div class="simple-list">
+          <div class="simple-item"><span class="simple-item-name">Acqua 1 lt (nat / gas)</span><span class="simple-item-price">2,5€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Acqua ½ lt (nat / gas)</span><span class="simple-item-price">1,5€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Bibite Lattina</span><span class="simple-item-price">3€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Coca / Lemon / Tonica alla spina grande</span><span class="simple-item-price">4,5€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Coca / Lemon / Tonica alla spina piccola</span><span class="simple-item-price">3€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Succhi di Frutta</span><span class="simple-item-price">4€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Tonica Dandy / Dandy Zero</span><span class="simple-item-price">4€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Ginger Beer Dandy</span><span class="simple-item-price">4€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Pompelmo Rosa Dandy</span><span class="simple-item-price">4€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Lemon Artigianale Dandy</span><span class="simple-item-price">4€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Red Bull</span><span class="simple-item-price">5€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Crodino / Campari Soda</span><span class="simple-item-price">5€</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><section class="menu-section" id="dolci">
   <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
     <span class="section-icon">🍮</span>
     <span class="section-title">Dolci</span>
@@ -769,297 +1061,6 @@ ul { list-style: none; }
   </div>
 </section>
 
-<!-- CAFFETTERIA & DIGESTIVI -->
-<section class="menu-section" id="caffe">
-  <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
-    <span class="section-icon">☕</span>
-    <span class="section-title">Caffetteria &amp; Digestivi</span>
-    <span class="section-badge">Caffè · Amari · Distillati</span>
-    <span class="section-chevron">▾</span>
-  </button>
-  <div class="section-body">
-    <div class="section-body-inner">
-      <h3 class="sub-title">☕ Caffetteria</h3>
-      <div class="simple-list">
-        <div class="simple-item"><span class="simple-item-name">Caffè espresso</span><span class="simple-item-price">2€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Cappuccino</span><span class="simple-item-price">3€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Caffè Americano</span><span class="simple-item-price">3€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Caffè Latte / Latte Macchiato</span><span class="simple-item-price">3€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Tè Caldo / Tisana</span><span class="simple-item-price">3€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Caffè Shakerato</span><span class="simple-item-price">4€</span></div>
-      </div>
-      <h3 class="sub-title">🍇 Grappe</h3>
-      <div class="simple-list">
-        <div class="simple-item"><span class="simple-item-name">Grappa di Vernaccia "Il Colombaio"</span><span class="simple-item-price">5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Grappa Riserva "Il Colombaio"</span><span class="simple-item-price">7€</span></div>
-      </div>
-      <h3 class="sub-title">🌿 Amari</h3>
-      <div class="simple-list">
-        <div class="simple-item"><span class="simple-item-name">Amaro del Capo</span><span class="simple-item-price">4€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Fernet Branca</span><span class="simple-item-price">4€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Jägermeister</span><span class="simple-item-price">4€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Montenegro</span><span class="simple-item-price">4€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Jefferson</span><span class="simple-item-price">5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Amari Artigianali</span><span class="simple-item-price">5€</span></div>
-      </div>
-      <h3 class="sub-title">🍬 Liquori</h3>
-      <div class="simple-list">
-        <div class="simple-item"><span class="simple-item-name">Sambuca</span><span class="simple-item-price">4€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Love Kam. — Caramello Salato</span><span class="simple-item-price">4€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Baileys</span><span class="simple-item-price">4€</span></div>
-        <div class="simple-item"><span class="simple-item-name">PATRON XO — Liquore al Caffè</span><span class="simple-item-price">5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Amaretto di Saronno</span><span class="simple-item-price">4€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Limoncello</span><span class="simple-item-price">4€</span></div>
-      </div>
-      <h3 class="sub-title">🥃 Whisky</h3>
-      <div class="simple-list">
-        <div class="simple-item"><span class="simple-item-name">Nikka from the Barrel</span><span class="simple-item-price">12€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Macallan 12</span><span class="simple-item-price">12€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Laphroaig 10</span><span class="simple-item-price">9€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Wild Turkey 101</span><span class="simple-item-price">8€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Bulleit Rye</span><span class="simple-item-price">6€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Bulleit Bourbon</span><span class="simple-item-price">5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Dewar's</span><span class="simple-item-price">5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Jack Daniel's</span><span class="simple-item-price">4€</span></div>
-      </div>
-      <h3 class="sub-title">🌵 Agave &amp; Rum</h3>
-      <div class="simple-list">
-        <div class="simple-item"><span class="simple-item-name">Tequila Patron Reposado</span><span class="simple-item-price">10€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Tequila Patron Silver</span><span class="simple-item-price">8€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Mezcal Ilegal</span><span class="simple-item-price">8€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Don Papa Rum</span><span class="simple-item-price">10€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Diplomatico</span><span class="simple-item-price">9€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Zacapa 23</span><span class="simple-item-price">8€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Santa Teresa</span><span class="simple-item-price">8€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Bumbu</span><span class="simple-item-price">7€</span></div>
-      </div>
-      <h3 class="sub-title">✨ Altro</h3>
-      <div class="simple-list">
-        <div class="simple-item"><span class="simple-item-name">Grey Goose Vodka</span><span class="simple-item-price">8€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Vecchia Romagna</span><span class="simple-item-price">4€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Courvoisier VSOP</span><span class="simple-item-price">8€</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COCKTAIL -->
-<section class="menu-section" id="cocktail">
-  <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
-    <span class="section-icon">🍸</span>
-    <span class="section-title">Cocktail</span>
-    <span class="section-badge">Classici · Premium</span>
-    <span class="section-chevron">▾</span>
-  </button>
-  <div class="section-body">
-    <div class="section-body-inner">
-      <h3 class="sub-title">Classici</h3>
-      <div class="dish-grid">
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Sprissi</span><span class="dish-price">9€</span></div><p class="dish-desc">Bitter Martini Riserva, pompelmo rosa Dandy, Spumante Lumis</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Spritz Aperol / Campari</span><span class="dish-price">8€</span></div><p class="dish-desc">Il classico aperitivo italiano</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Hugo Spritz</span><span class="dish-price">10€</span></div><p class="dish-desc">St. Germain (sambuco), prosecco, soda, menta fresca</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Americano</span><span class="dish-price">8€</span></div><p class="dish-desc">Bitter Martini Riserva, Vermouth rosso Martini, soda</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Negroni</span><span class="dish-price">8€</span></div><p class="dish-desc">Bombay Sapphire, Bitter Martini Riserva, Vermouth rosso Martini</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Basil Smash</span><span class="dish-price">10€</span></div><p class="dish-desc">Bombay Sapphire, limone, zucchero, basilico fresco</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Paloma</span><span class="dish-price">10€</span></div><p class="dish-desc">Tequila Cazadores, lime, sciroppo d'agave, pompelmo rosa Dandy, crusta di sale</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Margarita</span><span class="dish-price">10€</span></div><p class="dish-desc">Tequila Cazadores, Triplesec, lime, sciroppo d'agave</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Mojito</span><span class="dish-price">10€</span></div><p class="dish-desc">Rum Bacardi Carta Blanca, lime, menta fresca, zucchero, soda</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Tropical Daiquiri Frozen</span><span class="dish-price">10€</span></div><p class="dish-desc">Rum Bacardi Carta Blanca, lime, purea di mango e passion fruit</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Piña Colada</span><span class="dish-price">10€</span></div><p class="dish-desc">Rum Bacardi Carta Oro, ananas, cocco, lime</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Moscow Mule</span><span class="dish-price">10€</span></div><p class="dish-desc">Vodka Eristoff, lime, Ginger Beer Dandy</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Whisky Sour</span><span class="dish-price">10€</span></div><p class="dish-desc">Bulleit Rye, limone, zucchero, foamer</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Fernandito</span><span class="dish-price">8€</span></div><p class="dish-desc">Fernet Branca, Coca Cola, lime</p></div>
-      </div>
-
-      <h3 class="sub-title">🌟 I Premium del Poggio</h3>
-      <div class="dish-grid">
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Sua Maestà il Martini</span><span class="dish-price">12€</span></div><p class="dish-desc">Frantuono gin all'olio d'oliva, Vermouth ambrato Martini Riserva, olive</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Negroni Fumé</span><span class="dish-price">12€</span></div><p class="dish-desc">Maite Fiamma Gin, Mezcal, Bitter Martini Riserva, Vermouth Martini Rubino Riserva, rosmarino affumicato</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Spicy Paloma</span><span class="dish-price">12€</span></div><p class="dish-desc">Tequila Patron Reposado, liquore allo Jalapeño, lime, agave, pompelmo rosa Dandy, tabasco verde</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Issi Margarita</span><span class="dish-price">12€</span></div><p class="dish-desc">Tequila Patron Reposado, Mezcal, lime, sciroppo d'agave</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Jungle Bird</span><span class="dish-price">12€</span></div><p class="dish-desc">Rum Jamaicano, bitter fusetti alla banana, ananas, zucchero, lime</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Espresso Mentini</span><span class="dish-price">12€</span></div><p class="dish-desc">Grey Goose Vodka, caffè espresso, Patron XO, zucchero, menta fresca</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Issi Sour</span><span class="dish-price">12€</span></div><p class="dish-desc">Wild Turkey 101 Bourbon, limone, zucchero, Chianti di San Gimignano, foamer</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Paper Plane</span><span class="dish-price">12€</span></div><p class="dish-desc">Bulleit Bourbon, limone, Aperol, Amaro Jefferson</p></div>
-      </div>
-
-      <h3 class="sub-title">🍃 Analcolici</h3>
-      <div class="simple-list">
-        <div class="simple-item"><span class="simple-item-name">Sprissi Zero — Bitter Martini Vibrante, soda pompelmo</span><span class="simple-item-price">7€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Il Floreale — Bitter Martini Floreale, mela verde, soda</span><span class="simple-item-price">7€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Il Fruttato — Arancia, ananas, granatina</span><span class="simple-item-price">6€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Mojito Zero — Lime, menta, ginger beer, soda</span><span class="simple-item-price">8€</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GIN TONIC -->
-<section class="menu-section" id="gin">
-  <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
-    <span class="section-icon">🫙</span>
-    <span class="section-title">Gin Tonic — Selezione del Gingegnere</span>
-    <span class="section-badge">20 gin</span>
-    <span class="section-chevron">▾</span>
-  </button>
-  <div class="section-body">
-    <div class="section-body-inner">
-      <p class="section-note">Tutti i gin sono serviti con tonica artigianale italiana "Dandy Classic Touch" — disponibile anche "Dandy Zero Zuccheri"</p>
-      <div class="gin-list">
-        <div class="gin-item"><span class="gin-num">1</span><div class="gin-info"><span class="gin-name">Bombay Dry</span><span class="gin-profile">Secco, classico, pulito</span></div><span class="gin-price">8€</span></div>
-        <div class="gin-item"><span class="gin-num">2</span><div class="gin-info"><span class="gin-name">Bombay Sapphire</span><span class="gin-profile">Secco, speziato, leggermente agrumato e floreale</span></div><span class="gin-price">9€</span></div>
-        <div class="gin-item"><span class="gin-num">3</span><div class="gin-info"><span class="gin-name">Tanqueray Ten</span><span class="gin-profile">Secco, pulito, classico, agrumato</span></div><span class="gin-price">10€</span></div>
-        <div class="gin-item"><span class="gin-num">4</span><div class="gin-info"><span class="gin-name">Monkey 47</span><span class="gin-profile">Complesso, morbido, speziato, elegante</span></div><span class="gin-price">14€</span></div>
-        <div class="gin-item"><span class="gin-num">5</span><div class="gin-info"><span class="gin-name">Ciauru Gin — Pompelmo Rosa</span><span class="gin-profile">Fresco, estivo, pompelmo rosa vero</span></div><span class="gin-price">10€</span></div>
-        <div class="gin-item"><span class="gin-num">6</span><div class="gin-info"><span class="gin-name">Rame Italian Dry</span><span class="gin-profile">Mediterraneo, aromatico, leggermente agrumato</span></div><span class="gin-price">10€</span></div>
-        <div class="gin-item"><span class="gin-num">7</span><div class="gin-info"><span class="gin-name">Rame London Dry</span><span class="gin-profile">Secco, speziato, pepato</span></div><span class="gin-price">10€</span></div>
-        <div class="gin-item"><span class="gin-num">8</span><div class="gin-info"><span class="gin-name">Piero Dry Gin</span><span class="gin-profile">Morbido, elegante, speziato</span></div><span class="gin-price">12€</span></div>
-        <div class="gin-item"><span class="gin-num">9</span><div class="gin-info"><span class="gin-name">Barbarasa London Dry</span><span class="gin-profile">Secco, aromatico, agrumato</span></div><span class="gin-price">10€</span></div>
-        <div class="gin-item"><span class="gin-num">10</span><div class="gin-info"><span class="gin-name">Barbarasa Navy</span><span class="gin-profile">Secco, deciso, molto agrumato</span></div><span class="gin-price">12€</span></div>
-        <div class="gin-item"><span class="gin-num">11</span><div class="gin-info"><span class="gin-name">Maite Spiaggialunga</span><span class="gin-profile">Aromatico, mediterraneo, leggermente speziato</span></div><span class="gin-price">12€</span></div>
-        <div class="gin-item"><span class="gin-num">12</span><div class="gin-info"><span class="gin-name">Maite Fiamma</span><span class="gin-profile">Secco, complesso, leggermente affumicato</span></div><span class="gin-price">12€</span></div>
-        <div class="gin-item"><span class="gin-num">13</span><div class="gin-info"><span class="gin-name">Upperhand</span><span class="gin-profile">Fresco, estivo, morbido — sentori di basilico e limone</span></div><span class="gin-price">10€</span></div>
-        <div class="gin-item"><span class="gin-num">14</span><div class="gin-info"><span class="gin-name">Hendrick's</span><span class="gin-profile">Fresco, aromatico, floreale</span></div><span class="gin-price">10€</span></div>
-        <div class="gin-item"><span class="gin-num">15</span><div class="gin-info"><span class="gin-name">Nordés</span><span class="gin-profile">Morbido, fresco, fruttato</span></div><span class="gin-price">10€</span></div>
-        <div class="gin-item"><span class="gin-num">16</span><div class="gin-info"><span class="gin-name">J Rose</span><span class="gin-profile">Floreale, fruttato, leggermente agrumato e speziato</span></div><span class="gin-price">12€</span></div>
-        <div class="gin-item"><span class="gin-num">17</span><div class="gin-info"><span class="gin-name">Poseidon</span><span class="gin-profile">Marino, fresco, agrumato</span></div><span class="gin-price">12€</span></div>
-        <div class="gin-item"><span class="gin-num">18</span><div class="gin-info"><span class="gin-name">Brockman's</span><span class="gin-profile">Morbido, frutti rossi</span></div><span class="gin-price">10€</span></div>
-        <div class="gin-item"><span class="gin-num">19</span><div class="gin-info"><span class="gin-name">Arigatuono</span><span class="gin-profile">Stile giapponese — elegante, pulito, agrumato, speziato</span></div><span class="gin-price">12€</span></div>
-        <div class="gin-item"><span class="gin-num">20</span><div class="gin-info"><span class="gin-name">Frantuono</span><span class="gin-profile">Morbido, delicato, mediterraneo — sentori di oliva</span></div><span class="gin-price">12€</span></div>
-      </div>
-      <p class="section-note" style="margin-top: 0.85rem;">Abbiamo molti altri gin in costante aggiornamento — chiedi al Gingegnere! 10€</p>
-    </div>
-  </div>
-</section>
-
-<!-- VINI -->
-<section class="menu-section" id="vini">
-  <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
-    <span class="section-icon">🍷</span>
-    <span class="section-title">Carta dei Vini</span>
-    <span class="section-badge">Bianchi · Rossi · Bollicine</span>
-    <span class="section-chevron">▾</span>
-  </button>
-  <div class="section-body">
-    <div class="section-body-inner">
-      <!-- Bianchi -->
-      <div class="sub-accordion">
-        <button class="sub-trigger" onclick="toggleSub(this)" aria-expanded="false">
-          <span class="sub-trigger-title">🥂 Bianchi &amp; Bollicine</span>
-          <span class="sub-trigger-chevron">▾</span>
-        </button>
-        <div class="sub-body">
-          <div class="sub-body-inner">
-            <div class="wine-list">
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Vernaccia di SG DOCG "Selvabianca"</div><div class="wine-producer">Il Colombaio di Santa Chiara · 100% Vernaccia</div></div><div class="wine-price">24€ / 6€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Vernaccia di SG DOCG "Albereta"</div><div class="wine-producer">Il Colombaio di Santa Chiara · 100% Vernaccia</div></div><div class="wine-price">46€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Alto Adige Chardonnay "Schwarzhaus"</div><div class="wine-producer">Stroblhof · 100% Chardonnay</div></div><div class="wine-price">30€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Alto Adige Sauvignon "Nico"</div><div class="wine-producer">Stroblhof · 100% Sauvignon</div></div><div class="wine-price">32€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Alto Adige Valle Isarco "Kerner"</div><div class="wine-producer">Taschlerhof · 100% Kerner</div></div><div class="wine-price">28€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Alto Adige Valle Isarco "Gewurztraminer"</div><div class="wine-producer">Taschlerhof · 100% Gewurztraminer</div></div><div class="wine-price">32€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Riesling Wehlener Sonnenuhr Spätlese</div><div class="wine-producer">Kerpen · 100% Riesling</div></div><div class="wine-price">30€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Soave Classico DOC</div><div class="wine-producer">Pieropan · 85% Garganega 15% Trebbiano</div></div><div class="wine-price">24€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Lugana DOC "Capotesta"</div><div class="wine-producer">Cascina Maddalena · 100% Turbiana</div></div><div class="wine-price">26€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Vermentino Colli di Luni DOC</div><div class="wine-producer">Ottaviano Lambruschi · 100% Vermentino</div></div><div class="wine-price">26€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Fiano Avellino DOCG</div><div class="wine-producer">Colli di Lapio · 100% Fiano di Avellino</div></div><div class="wine-price">28€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Etna Bianco DOC</div><div class="wine-producer">Benanti · 100% Carricante</div></div><div class="wine-price">33€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">IGT Toscana "Fonteuva" Bianco</div><div class="wine-producer">Il Colombaio di Santa Chiara · Vernaccia, Vermentino, Malvasia</div></div><div class="wine-price">18€ / 5€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Spumante Brut "Lumis"</div><div class="wine-producer">Il Colombaio · 80% Vernaccia 20% Chardonnay</div></div><div class="wine-price">24€ / 6€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Spumante Brut "Lumis" Magnum</div><div class="wine-producer">Il Colombaio · 80% Vernaccia 20% Chardonnay</div></div><div class="wine-price">54€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Spumante Brut "Lumis" Rosé</div><div class="wine-producer">Il Colombaio · 100% Sangiovese</div></div><div class="wine-price">26€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Altalanga Extra Brut</div><div class="wine-producer">Ettore Germano · 80% Pinot Nero 20% Chardonnay</div></div><div class="wine-price">40€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Trento DOC "Perlè"</div><div class="wine-producer">Ferrari · 100% Chardonnay</div></div><div class="wine-price">60€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Crémant d'Alsace Millésime Brut</div><div class="wine-producer">Dirler-Cadé · Pinot Nero / Pinot Gris / Auxerrois</div></div><div class="wine-price">40€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Champagne "Zero"</div><div class="wine-producer">Tarlant · Pinot Nero / Chardonnay / Meunier / Petit Meslier</div></div><div class="wine-price">95€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Rosé IGT "Cremisi"</div><div class="wine-producer">Il Colombaio · 100% Sangiovese</div></div><div class="wine-price">24€ / 6€</div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Rossi -->
-      <div class="sub-accordion">
-        <button class="sub-trigger" onclick="toggleSub(this)" aria-expanded="false">
-          <span class="sub-trigger-title">🍷 Rossi &amp; Passiti</span>
-          <span class="sub-trigger-chevron">▾</span>
-        </button>
-        <div class="sub-body">
-          <div class="sub-body-inner">
-            <div class="wine-list">
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Chianti CS DOCG "Campale"</div><div class="wine-producer">Il Colombaio · 90% Sangiovese 10% Merlot</div></div><div class="wine-price">24€ / 6€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Chianti Classico</div><div class="wine-producer">Riecine · 100% Sangiovese</div></div><div class="wine-price">35€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Chianti CS Riserva DOCG "Il Priore"</div><div class="wine-producer">Il Colombaio · 90% Sangiovese 10% Canaiolo</div></div><div class="wine-price">36€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Chianti CL Riserva DOCG "Vigna Barbischio"</div><div class="wine-producer">Maurizio Alongi · 100% Sangiovese</div></div><div class="wine-price">48€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Rosso di Montalcino DOC</div><div class="wine-producer">Castello Tricerchi · 100% Sangiovese</div></div><div class="wine-price">32€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Brunello di Montalcino DOCG</div><div class="wine-producer">Castello Tricerchi · 100% Sangiovese</div></div><div class="wine-price">66€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Bolgheri Rosso DOC</div><div class="wine-producer">Le Macchiole · Merlot / Cab Franc / Cab Sauvignon / Syrah</div></div><div class="wine-price">38€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Cabernet Franc IGT "Bacicolo"</div><div class="wine-producer">Il Colombaio · 100% Cabernet Franc</div></div><div class="wine-price">80€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Nebbiolo Langhe DOC</div><div class="wine-producer">Ettore Germano · 100% Nebbiolo</div></div><div class="wine-price">26€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Ciliegiolo IGT</div><div class="wine-producer">Antonio Camillo · 100% Ciliegiolo</div></div><div class="wine-price">24€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Etna Rosso DOC</div><div class="wine-producer">Tenuta delle Terre Nere · 100% Nerello Mascalese</div></div><div class="wine-price">45€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Pinot Nero</div><div class="wine-producer">Panizzi · 100% Pinot Nero</div></div><div class="wine-price">28€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">IGT Toscana Rosso "Fonteuva"</div><div class="wine-producer">Il Colombaio · 100% Sangiovese</div></div><div class="wine-price">18€ / 5€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Moscato d'Asti DOCG "Camp Blanc"</div><div class="wine-producer">Emidio Vada · 100% Moscato Bianco di Cannelli</div></div><div class="wine-price">26€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Passito di Pantelleria DOC "Ben Ryé"</div><div class="wine-producer">Donna Fugata · 100% Zibibbo</div></div><div class="wine-price">65€</div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BIRRE -->
-<section class="menu-section" id="birre">
-  <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
-    <span class="section-icon">🍺</span>
-    <span class="section-title">Birre &amp; Bevande</span>
-    <span class="section-badge">Birre · Soft Drink</span>
-    <span class="section-chevron">▾</span>
-  </button>
-  <div class="section-body">
-    <div class="section-body-inner">
-      <h3 class="sub-title">🍺 Birre alla Spina</h3>
-      <div class="simple-list">
-        <div class="simple-item"><span class="simple-item-name">Raffo Grezza — Grande</span><span class="simple-item-price">6€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Raffo Grezza — Piccola</span><span class="simple-item-price">4€</span></div>
-      </div>
-      <h3 class="sub-title">🍶 Birrificio San Gimignano</h3>
-      <div class="simple-list">
-        <div class="simple-item"><span class="simple-item-name">Sigeric — Blonde</span><span class="simple-item-price">6,5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Strade — Blanche</span><span class="simple-item-price">6,5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Roma — IPA</span><span class="simple-item-price">6,5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Divago — Amber</span><span class="simple-item-price">6,5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Nikulas — Tripel</span><span class="simple-item-price">6,5€</span></div>
-      </div>
-      <h3 class="sub-title">🍶 Bottiglie 33cl</h3>
-      <div class="simple-list">
-        <div class="simple-item"><span class="simple-item-name">Menabrea</span><span class="simple-item-price">4€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Corona</span><span class="simple-item-price">4€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Beck's</span><span class="simple-item-price">4€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Ceres</span><span class="simple-item-price">4,5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Tennent's</span><span class="simple-item-price">4,5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Corona Analcolica</span><span class="simple-item-price">4€</span></div>
-      </div>
-      <h3 class="sub-title">💧 Acqua &amp; Soft Drink</h3>
-      <div class="simple-list">
-        <div class="simple-item"><span class="simple-item-name">Acqua 1 lt (nat / gas)</span><span class="simple-item-price">2,5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Acqua ½ lt (nat / gas)</span><span class="simple-item-price">1,5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Bibite Lattina</span><span class="simple-item-price">3€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Coca / Lemon / Tonica alla spina grande</span><span class="simple-item-price">4,5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Coca / Lemon / Tonica alla spina piccola</span><span class="simple-item-price">3€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Succhi di Frutta</span><span class="simple-item-price">4€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Tonica Dandy / Dandy Zero</span><span class="simple-item-price">4€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Ginger Beer Dandy</span><span class="simple-item-price">4€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Pompelmo Rosa Dandy</span><span class="simple-item-price">4€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Lemon Artigianale Dandy</span><span class="simple-item-price">4€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Red Bull</span><span class="simple-item-price">5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Crodino / Campari Soda</span><span class="simple-item-price">5€</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ALLERGENI -->
 <section class="menu-section" id="allergeni">
   <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
     <span class="section-icon">⚠️</span>
