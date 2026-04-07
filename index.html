@@ -6,388 +6,755 @@
 <title>Poggio a Issi — Menù 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --green-dark:   #2d5a1b;
-  --green-mid:    #4a7c2f;
-  --green-light:  #7aaa50;
-  --orange:       #e07b2a;
-  --orange-light: #f5a055;
-  --cream:        #f0ede4;
-  --cream-dark:   #e8e3d8;
-  --cream-card:   #faf8f3;
-  --text:         #2a2217;
-  --text-muted:   #5a5040;
-  --divider:      #ccc7b8;
-  --radius:       12px;
-  --shadow:       0 4px 18px rgba(45,90,27,0.10);
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body:    'Lato', 'Helvetica Neue', sans-serif;
-  --nav-h:        54px;
+  --g1: #1a3d0a;
+  --g2: #2d5a1b;
+  --g3: #4a7c2f;
+  --g4: #7aaa50;
+  --g5: #c2d9a8;
+  --orange: #d96b1a;
+  --orange2: #f08c40;
+  --cream: #f4f0e6;
+  --cream2: #ece7da;
+  --cream3: #faf8f3;
+  --white: #ffffff;
+  --text: #1e1a12;
+  --text2: #4a4236;
+  --text3: #7a6e5e;
+  --border: #d9d3c4;
+  --shadow-sm: 0 1px 4px rgba(26,61,10,0.08);
+  --shadow-md: 0 4px 20px rgba(26,61,10,0.12);
+  --shadow-lg: 0 8px 32px rgba(26,61,10,0.16);
+  --r: 14px;
+  --r-sm: 8px;
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --nav-h: 58px;
+  --tab-h: 52px;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 8px); }
-body { font-family: var(--font-body); font-size: 16px; color: var(--text); background: var(--cream); -webkit-font-smoothing: antialiased; }
-img { display: block; max-width: 100%; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + var(--tab-h) + 8px); }
+body { font-family: var(--font-body); font-size: 15px; color: var(--text); background: var(--cream); -webkit-font-smoothing: antialiased; overscroll-behavior: none; }
 button { cursor: pointer; font: inherit; border: none; background: none; }
 ul { list-style: none; }
 
-/* ===== STICKY NAV ===== */
-.sticky-nav { position: sticky; top: 0; z-index: 200; background: var(--green-dark); box-shadow: 0 2px 12px rgba(0,0,0,0.28); }
-.sticky-nav-inner { display: flex; align-items: center; height: var(--nav-h); overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding: 0 12px; gap: 6px; }
-.sticky-nav-inner::-webkit-scrollbar { display: none; }
-.nav-tab { white-space: nowrap; padding: 6px 14px; border-radius: 20px; background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.82); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.03em; transition: background 160ms, color 160ms; flex-shrink: 0; -webkit-tap-highlight-color: transparent; }
-.nav-tab:active, .nav-tab.active { background: var(--orange); color: #fff; }
-
 /* ===== HERO ===== */
-.hero { background: linear-gradient(160deg, var(--green-dark) 0%, var(--green-mid) 60%, var(--green-light) 100%); text-align: center; padding: 2.5rem 1.25rem 0; color: #fff; position: relative; overflow: hidden; }
-.hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-.hero-inner { position: relative; z-index: 1; }
-.logo-icon { width: 52px; height: 52px; margin: 0 auto 0.75rem; }
-.hero h1 { font-family: var(--font-display); font-size: clamp(2rem, 8vw, 3.2rem); color: #fff; line-height: 1.1; margin-bottom: 0.5rem; }
-.hero p { font-size: 0.95rem; color: rgba(255,255,255,0.82); max-width: 48ch; margin: 0 auto 1.2rem; line-height: 1.6; }
-.hero-badges { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 1.5rem; }
-.hero-badge { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: #fff; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; }
+.hero {
+  background: var(--g1);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(74,124,47,0.5) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 30% at 85% 80%, rgba(45,90,27,0.3) 0%, transparent 60%);
+  text-align: center;
+  padding: 2.2rem 1.5rem 0;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--g4), var(--orange2), var(--g4), transparent);
+}
+.camper-logo {
+  width: 90px;
+  height: auto;
+  margin: 0 auto 1rem;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.35));
+}
+.hero-brand { font-family: var(--font-display); font-size: clamp(1.8rem, 7vw, 2.8rem); color: #fff; line-height: 1; letter-spacing: -0.01em; margin-bottom: 0.25rem; }
+.hero-tagline { font-size: 0.82rem; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; margin-bottom: 1.4rem; }
+.hero-chips { display: flex; justify-content: center; gap: 6px; flex-wrap: wrap; margin-bottom: 1.6rem; padding: 0 0.5rem; }
+.hero-chip {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.85);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 100px;
+  letter-spacing: 0.04em;
+}
 
-/* ===== HERO NAV ===== */
-.hero-nav-scroll { display: flex; gap: 6px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding: 0.9rem 1rem 1rem; margin: 0 -1.25rem; }
-.hero-nav-scroll::-webkit-scrollbar { display: none; }
-.hero-nav-tab { white-space: nowrap; padding: 7px 15px; border-radius: 20px; background: rgba(255,255,255,0.18); color: rgba(255,255,255,0.9); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.03em; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.25); -webkit-tap-highlight-color: transparent; transition: background 160ms; }
-.hero-nav-tab:active { background: var(--orange); border-color: var(--orange); color: #fff; }
+/* ===== MEAL SWITCHER ===== */
+.meal-switcher-wrap {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1.5rem;
+}
+.meal-switcher {
+  display: inline-flex;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 100px;
+  padding: 3px;
+  gap: 2px;
+}
+.meal-btn {
+  padding: 8px 24px;
+  border-radius: 100px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+  transition: all 220ms cubic-bezier(0.16,1,0.3,1);
+  letter-spacing: 0.03em;
+  position: relative;
+}
+.meal-btn.active {
+  background: var(--orange);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(217,107,26,0.5);
+}
+.meal-btn .meal-icon { margin-right: 5px; font-size: 0.9rem; }
+
+/* ===== STICKY NAV ===== */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 300;
+  background: var(--g1);
+}
+.sticky-nav-inner {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px 10px;
+  gap: 5px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.nav-tab {
+  white-space: nowrap;
+  padding: 5px 13px;
+  border-radius: 100px;
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.7);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: all 180ms;
+  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+  border: 1px solid transparent;
+}
+.nav-tab:active,
+.nav-tab.active {
+  background: var(--orange);
+  color: #fff;
+  border-color: var(--orange);
+  box-shadow: 0 2px 8px rgba(217,107,26,0.4);
+}
+/* Nav groups hidden/shown based on meal */
+.nav-group { display: contents; }
+.nav-group.hidden .nav-tab { display: none; }
 
 /* ===== MAIN ===== */
-.main { max-width: 860px; margin: 0 auto; padding: 1.25rem 0.85rem 5rem; }
+.main { max-width: 860px; margin: 0 auto; padding: 1rem 0.75rem 5rem; }
 
-/* ===== ACCORDION — livello 1 (sezioni) ===== */
-.menu-section { margin-bottom: 0.6rem; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
-.section-trigger { width: 100%; display: flex; align-items: center; gap: 12px; padding: 1rem 1.1rem; background: var(--cream-card); cursor: pointer; text-align: left; -webkit-tap-highlight-color: transparent; transition: background 160ms; border-bottom: 2px solid transparent; }
-.section-trigger:active { background: var(--cream-dark); }
-.section-trigger.open { background: var(--green-dark); border-bottom-color: var(--orange); }
-.section-icon { font-size: 1.3rem; min-width: 36px; text-align: center; }
-.section-title { font-family: var(--font-display); font-size: clamp(1rem, 4vw, 1.25rem); color: var(--green-dark); flex: 1; line-height: 1.2; }
+/* meal sections */
+.meal-panel { display: none; }
+.meal-panel.active { display: block; }
+
+/* ===== ACCORDION ===== */
+.menu-section { margin-bottom: 8px; border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow-sm); }
+.section-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.9rem 1rem;
+  background: var(--white);
+  cursor: pointer;
+  text-align: left;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 160ms;
+  border-left: 3px solid transparent;
+}
+.section-trigger:active { background: var(--cream2); }
+.section-trigger.open {
+  background: var(--g2);
+  border-left-color: var(--orange);
+}
+.section-icon { font-size: 1.1rem; min-width: 28px; text-align: center; }
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(0.95rem, 3.5vw, 1.15rem);
+  color: var(--g2);
+  flex: 1;
+  line-height: 1.2;
+  font-style: italic;
+}
 .section-trigger.open .section-title { color: #fff; }
-.section-chevron { font-size: 1rem; color: var(--text-muted); transition: transform 280ms cubic-bezier(0.16,1,0.3,1), color 160ms; margin-left: auto; }
-.section-trigger.open .section-chevron { transform: rotate(180deg); color: rgba(255,255,255,0.7); }
-.section-count { font-size: 0.72rem; font-weight: 700; color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.15); padding: 2px 8px; border-radius: 20px; display: none; }
-.section-trigger.open .section-count { display: inline-block; }
-.section-body { background: var(--cream-card); max-height: 0; overflow: hidden; transition: max-height 450ms cubic-bezier(0.16,1,0.3,1); }
+.section-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--text3);
+  background: var(--cream2);
+  padding: 2px 7px;
+  border-radius: 100px;
+  letter-spacing: 0.03em;
+}
+.section-trigger.open .section-badge { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); }
+.section-chevron {
+  font-size: 0.8rem;
+  color: var(--text3);
+  transition: transform 300ms cubic-bezier(0.16,1,0.3,1), color 160ms;
+  margin-left: 4px;
+}
+.section-trigger.open .section-chevron { transform: rotate(180deg); color: rgba(255,255,255,0.6); }
+.section-body { background: var(--cream3); max-height: 0; overflow: hidden; transition: max-height 500ms cubic-bezier(0.16,1,0.3,1); }
 .section-body.open { max-height: 99999px; }
-.section-body-inner { padding: 1rem 0.9rem 1.2rem; }
+.section-body-inner { padding: 1rem 0.85rem 1.25rem; }
 
-/* ===== ACCORDION — livello 2 (sottocategorie vino) ===== */
-.sub-accordion { margin-bottom: 8px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(45,90,27,0.12); }
-.sub-trigger { width: 100%; display: flex; align-items: center; gap: 10px; padding: 0.7rem 1rem; background: #f0ede4; cursor: pointer; text-align: left; -webkit-tap-highlight-color: transparent; transition: background 160ms; }
-.sub-trigger.open { background: var(--green-mid); }
-.sub-trigger-icon { font-size: 1rem; }
-.sub-trigger-title { font-family: var(--font-display); font-size: 0.95rem; color: var(--green-dark); flex: 1; font-weight: 700; }
+/* ===== SUB ACCORDION (wines) ===== */
+.sub-accordion { margin-bottom: 8px; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+.sub-trigger { width: 100%; display: flex; align-items: center; gap: 8px; padding: 0.65rem 0.9rem; background: var(--cream2); cursor: pointer; text-align: left; -webkit-tap-highlight-color: transparent; transition: background 160ms; }
+.sub-trigger.open { background: var(--g3); }
+.sub-trigger-title { font-family: var(--font-display); font-size: 0.9rem; color: var(--g2); flex: 1; font-style: italic; }
 .sub-trigger.open .sub-trigger-title { color: #fff; }
-.sub-trigger-chevron { font-size: 0.85rem; color: var(--text-muted); transition: transform 260ms cubic-bezier(0.16,1,0.3,1); }
+.sub-trigger-chevron { font-size: 0.75rem; color: var(--text3); transition: transform 260ms cubic-bezier(0.16,1,0.3,1); }
 .sub-trigger.open .sub-trigger-chevron { transform: rotate(180deg); color: rgba(255,255,255,0.8); }
-.sub-body { max-height: 0; overflow: hidden; transition: max-height 400ms cubic-bezier(0.16,1,0.3,1); background: #fff; }
+.sub-body { max-height: 0; overflow: hidden; transition: max-height 420ms cubic-bezier(0.16,1,0.3,1); background: #fff; }
 .sub-body.open { max-height: 9999px; }
-.sub-body-inner { padding: 0.85rem 0.9rem; }
+.sub-body-inner { padding: 0.8rem; }
 
-/* ===== CARDS ===== */
-.dish-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(280px,100%), 1fr)); gap: 10px; }
-.dish-card { background: #fff; border-radius: 10px; padding: 0.85rem 0.95rem; box-shadow: 0 2px 10px rgba(45,90,27,0.08); border: 1px solid rgba(45,90,27,0.07); transition: transform 160ms, box-shadow 160ms; }
-.dish-card:active { transform: scale(0.985); }
-.dish-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 4px; }
-.dish-name { font-family: var(--font-display); font-size: 0.95rem; color: var(--orange); font-weight: 700; line-height: 1.2; }
-.dish-price { font-weight: 700; font-size: 1rem; color: var(--green-dark); white-space: nowrap; }
-.dish-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
-.dish-allergens { margin-top: 6px; font-size: 0.7rem; color: rgba(90,80,64,0.55); font-style: italic; }
+/* ===== DISH CARDS ===== */
+.dish-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(260px,100%), 1fr)); gap: 8px; }
+.dish-card {
+  background: #fff;
+  border-radius: var(--r-sm);
+  padding: 0.85rem 0.9rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  transition: transform 150ms, box-shadow 150ms;
+}
+.dish-card:active { transform: scale(0.98); }
+.dish-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 5px; }
+.dish-name { font-family: var(--font-display); font-size: 0.95rem; color: var(--orange); font-style: italic; line-height: 1.25; }
+.dish-price { font-weight: 700; font-size: 0.95rem; color: var(--g2); white-space: nowrap; background: var(--cream2); padding: 1px 8px; border-radius: 100px; font-family: var(--font-body); }
+.dish-desc { font-size: 0.8rem; color: var(--text2); line-height: 1.5; }
+.dish-allergens { margin-top: 5px; font-size: 0.68rem; color: var(--text3); font-style: italic; }
 
 /* ===== SIMPLE LIST ===== */
-.simple-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 7px; }
-.simple-item { background: #fff; border-radius: 8px; padding: 0.6rem 0.85rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(45,90,27,0.06); font-size: 0.875rem; }
-.simple-item-name { color: var(--text); font-weight: 500; }
-.simple-item-price { color: var(--green-dark); font-weight: 700; font-size: 0.875rem; white-space: nowrap; margin-left: 8px; }
+.simple-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 6px; }
+.simple-item {
+  background: #fff;
+  border-radius: var(--r-sm);
+  padding: 0.6rem 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  font-size: 0.82rem;
+}
+.simple-item-name { color: var(--text2); font-weight: 500; flex: 1; padding-right: 8px; }
+.simple-item-price { color: var(--g2); font-weight: 700; font-size: 0.82rem; white-space: nowrap; }
 
 /* ===== SUB TITLE ===== */
-.sub-title { font-family: var(--font-display); font-size: 1rem; color: var(--green-mid); margin: 1.2rem 0 0.75rem; padding-bottom: 3px; border-bottom: 1px solid var(--divider); }
+.sub-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--g3);
+  margin: 1.1rem 0 0.65rem;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  font-style: italic;
+}
 .sub-title:first-child { margin-top: 0; }
 
 /* ===== PAIRING BOX ===== */
-.pairing-box { background: linear-gradient(135deg, var(--green-dark), #3d7326); color: #fff; border-radius: 10px; padding: 0.9rem 1.1rem; margin-top: 1rem; font-size: 0.82rem; }
-.pairing-box strong { display: block; font-family: var(--font-display); font-size: 0.95rem; color: var(--orange-light); margin-bottom: 6px; }
-.pairing-item { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
-.pairing-item::before { content: "🍸"; font-size: 0.85rem; }
+.pairing-box {
+  background: var(--g1);
+  background-image: linear-gradient(135deg, var(--g1) 0%, var(--g2) 100%);
+  color: #fff;
+  border-radius: var(--r-sm);
+  padding: 0.85rem 1rem;
+  margin-top: 0.9rem;
+  font-size: 0.8rem;
+}
+.pairing-box strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--orange2);
+  margin-bottom: 6px;
+  font-style: italic;
+}
+.pairing-item { display: flex; align-items: center; gap: 7px; margin-bottom: 3px; color: rgba(255,255,255,0.85); }
+.pairing-item::before { content: "🍸"; font-size: 0.8rem; }
 
 /* ===== WINE LIST ===== */
-.wine-list { display: flex; flex-direction: column; gap: 7px; }
-.wine-item { background: #fff; border-radius: 10px; padding: 0.7rem 0.9rem; box-shadow: 0 2px 8px rgba(45,90,27,0.07); display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.wine-list { display: flex; flex-direction: column; gap: 6px; }
+.wine-item {
+  background: #fff;
+  border-radius: var(--r-sm);
+  padding: 0.65rem 0.85rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
 .wine-info { flex: 1; }
-.wine-name { font-weight: 700; color: var(--orange); font-size: 0.875rem; }
-.wine-producer { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
-.wine-price { font-weight: 700; color: var(--green-dark); font-size: 0.875rem; white-space: nowrap; text-align: right; }
+.wine-name { font-weight: 600; color: var(--orange); font-size: 0.82rem; }
+.wine-producer { font-size: 0.72rem; color: var(--text3); margin-top: 2px; }
+.wine-price { font-weight: 700; color: var(--g2); font-size: 0.82rem; white-space: nowrap; text-align: right; }
 
 /* ===== ALLERGEN ===== */
-.allergen-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap: 7px; }
-.allergen-item { background: #fff; border-radius: 8px; padding: 0.55rem 0.85rem; font-size: 0.82rem; display: flex; align-items: center; gap: 10px; border-left: 3px solid var(--orange-light); }
-.allergen-num { font-weight: 700; color: var(--orange); min-width: 20px; }
+.allergen-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px,1fr)); gap: 6px; }
+.allergen-item {
+  background: #fff;
+  border-radius: var(--r-sm);
+  padding: 0.5rem 0.8rem;
+  font-size: 0.78rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--orange2);
+}
+.allergen-num { font-weight: 700; color: var(--orange); min-width: 18px; font-size: 0.82rem; }
 
-/* ===== MISC ===== */
-.section-note { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.85rem; font-style: italic; }
+/* ===== GIN CARD ===== */
+.gin-list { display: grid; grid-template-columns: 1fr; gap: 6px; }
+.gin-item {
+  background: #fff;
+  border-radius: var(--r-sm);
+  padding: 0.65rem 0.9rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+.gin-num { font-weight: 700; color: var(--orange); font-size: 0.75rem; min-width: 22px; padding-top: 1px; }
+.gin-info { flex: 1; }
+.gin-name { font-weight: 600; font-size: 0.85rem; color: var(--g2); }
+.gin-profile { font-size: 0.75rem; color: var(--text3); margin-top: 1px; font-style: italic; }
+.gin-price { font-weight: 700; color: var(--g2); font-size: 0.85rem; white-space: nowrap; }
 
-.site-footer { background: var(--green-dark); color: rgba(255,255,255,0.7); text-align: center; padding: 2rem 1rem; font-size: 0.82rem; }
-.site-footer strong { color: #fff; }
+/* ===== NOTE ===== */
+.section-note { font-size: 0.76rem; color: var(--text3); margin-bottom: 0.75rem; font-style: italic; background: var(--cream2); padding: 6px 10px; border-radius: 6px; }
 
-.scroll-top { position: fixed; bottom: 1.25rem; right: 1.25rem; z-index: 50; background: var(--orange); color: #fff; width: 44px; height: 44px; border-radius: 50%; font-size: 1.2rem; box-shadow: 0 4px 14px rgba(0,0,0,0.2); display: none; align-items: center; justify-content: center; transition: transform 160ms; -webkit-tap-highlight-color: transparent; }
+/* ===== SCROLL TOP ===== */
+.scroll-top {
+  position: fixed; bottom: 1.25rem; right: 1.25rem; z-index: 50;
+  background: var(--orange); color: #fff;
+  width: 42px; height: 42px; border-radius: 50%;
+  font-size: 1rem; box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  display: none; align-items: center; justify-content: center;
+  transition: transform 160ms; -webkit-tap-highlight-color: transparent;
+}
 .scroll-top.visible { display: flex; }
-.scroll-top:active { transform: scale(0.9); }
+.scroll-top:active { transform: scale(0.88); }
 
 @media (max-width: 480px) {
-  :root { --nav-h: 50px; }
-  .nav-tab { padding: 5px 11px; font-size: 0.75rem; }
   .dish-grid { grid-template-columns: 1fr; }
   .simple-list { grid-template-columns: 1fr; }
   .allergen-grid { grid-template-columns: 1fr; }
-  .wine-item { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .wine-item { flex-direction: column; align-items: flex-start; gap: 3px; }
   .wine-price { align-self: flex-end; }
+  .gin-list { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 <body>
 
-<!-- STICKY NAV -->
-<nav class="sticky-nav" aria-label="Navigazione menù">
-  <div class="sticky-nav-inner">
-    <button class="nav-tab active" data-target="condividi">Condividi</button>
-    <button class="nav-tab" data-target="primi">Primi</button>
-    <button class="nav-tab" data-target="hamburger">Hamburger</button>
-    <button class="nav-tab" data-target="pinse">Pinse</button>
-    <button class="nav-tab" data-target="griglia">Griglia</button>
-    <button class="nav-tab" data-target="insalatone">Insalatone</button>
-    <button class="nav-tab" data-target="contorni">Contorni</button>
-    <button class="nav-tab" data-target="dolci">Dolci</button>
-    <button class="nav-tab" data-target="caffe">Caffetteria</button>
-    <button class="nav-tab" data-target="cocktail">Cocktail</button>
-    <button class="nav-tab" data-target="gin">Gin Tonic</button>
-    <button class="nav-tab" data-target="vini">Vini</button>
-    <button class="nav-tab" data-target="birre">Birre</button>
-    <button class="nav-tab" data-target="allergeni">Allergeni</button>
-  </div>
-</nav>
-
 <!-- HERO -->
 <div id="top" class="hero">
-  <div class="hero-inner">
-    <svg class="logo-icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo Poggio a Issi">
-      <circle cx="26" cy="26" r="25" fill="#4a7c2f" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
-      <path d="M26 38c-6-5-12-11-12-17a12 12 0 0124 0c0 6-6 12-12 17z" fill="#7aaa50"/>
-      <circle cx="26" cy="21" r="5.5" fill="#2d5a1b"/>
-      <path d="M19 41h14" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round"/>
-    </svg>
-    <h1>Poggio a Issi</h1>
-    <p>Immerso nel verde, tra profumi di bosco e un'atmosfera autentica. Gusto, natura e arte del drink.</p>
-    <div class="hero-badges">
-      <span class="hero-badge">🌿 Cucina Toscana</span>
-      <span class="hero-badge">🔥 Griglia</span>
-      <span class="hero-badge">🍕 Pinse artigianali</span>
-      <span class="hero-badge">🍸 Mixology</span>
-    </div>
-    <div class="hero-nav-scroll" aria-hidden="true">
-      <button class="hero-nav-tab" data-target="condividi">Condividi</button>
-      <button class="hero-nav-tab" data-target="primi">Primi</button>
-      <button class="hero-nav-tab" data-target="hamburger">Hamburger</button>
-      <button class="hero-nav-tab" data-target="pinse">Pinse</button>
-      <button class="hero-nav-tab" data-target="griglia">Griglia</button>
-      <button class="hero-nav-tab" data-target="insalatone">Insalatone</button>
-      <button class="hero-nav-tab" data-target="contorni">Contorni</button>
-      <button class="hero-nav-tab" data-target="dolci">Dolci</button>
-      <button class="hero-nav-tab" data-target="caffe">Caffetteria</button>
-      <button class="hero-nav-tab" data-target="cocktail">Cocktail</button>
-      <button class="hero-nav-tab" data-target="gin">Gin Tonic</button>
-      <button class="hero-nav-tab" data-target="vini">Vini</button>
-      <button class="hero-nav-tab" data-target="birre">Birre</button>
-      <button class="hero-nav-tab" data-target="allergeni">Allergeni</button>
+  <!-- Camper SVG logo extracted from PDF -->
+  <svg class="camper-logo" viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Poggio a Issi — Camper Logo">
+    <!-- Ground shadow -->
+    <ellipse cx="100" cy="122" rx="90" ry="6" fill="rgba(0,0,0,0.15)"/>
+    <!-- Camper body -->
+    <rect x="18" y="55" width="148" height="58" rx="8" fill="#c8d8b0"/>
+    <!-- Camper front cab -->
+    <rect x="152" y="68" width="30" height="45" rx="5" fill="#b8cc9c"/>
+    <!-- Cab windshield -->
+    <rect x="155" y="72" width="22" height="20" rx="3" fill="rgba(255,255,255,0.5)"/>
+    <!-- Side windows -->
+    <rect x="28" y="65" width="28" height="20" rx="3" fill="rgba(255,255,255,0.5)"/>
+    <rect x="62" y="65" width="28" height="20" rx="3" fill="rgba(255,255,255,0.5)"/>
+    <!-- Door -->
+    <rect x="118" y="68" width="26" height="32" rx="3" fill="rgba(0,0,0,0.08)"/>
+    <circle cx="141" cy="84" r="2" fill="rgba(0,0,0,0.2)"/>
+    <!-- Roof stripe -->
+    <rect x="18" y="55" width="164" height="7" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <!-- Wheels -->
+    <circle cx="50" cy="117" r="12" fill="#3a3a3a"/>
+    <circle cx="50" cy="117" r="6" fill="#6a6a6a"/>
+    <circle cx="50" cy="117" r="2" fill="#aaa"/>
+    <circle cx="148" cy="117" r="12" fill="#3a3a3a"/>
+    <circle cx="148" cy="117" r="6" fill="#6a6a6a"/>
+    <circle cx="148" cy="117" r="2" fill="#aaa"/>
+    <!-- Hitch -->
+    <rect x="12" y="110" width="8" height="4" rx="2" fill="#555"/>
+    <!-- Lettering on top -->
+    <text x="100" y="48" font-family="'DM Serif Display', Georgia, serif" font-size="13" fill="rgba(255,255,255,0.9)" text-anchor="middle" font-weight="bold" letter-spacing="2">POGGIO A ISSI</text>
+    <!-- Decorative line -->
+    <line x1="30" y1="52" x2="170" y2="52" stroke="rgba(255,255,255,0.4)" stroke-width="1" stroke-dasharray="4 3"/>
+    <!-- Awning stripes on camper body -->
+    <path d="M28 75 L56 75" stroke="rgba(122,170,80,0.5)" stroke-width="1.5"/>
+    <path d="M28 80 L56 80" stroke="rgba(122,170,80,0.5)" stroke-width="1.5"/>
+  </svg>
+
+  <div class="hero-brand">Poggio a Issi</div>
+  <div class="hero-tagline">Menù 2026 · Gusto, Natura &amp; Arte del Drink</div>
+  <div class="hero-chips">
+    <span class="hero-chip">🌿 Cucina Toscana</span>
+    <span class="hero-chip">🔥 Griglia</span>
+    <span class="hero-chip">🍕 Pinse Artigianali</span>
+    <span class="hero-chip">🍸 Mixology</span>
+  </div>
+
+  <!-- MEAL SWITCHER -->
+  <div class="meal-switcher-wrap">
+    <div class="meal-switcher">
+      <button class="meal-btn active" data-meal="pranzo" onclick="switchMeal('pranzo')">
+        <span class="meal-icon">☀️</span>Pranzo
+      </button>
+      <button class="meal-btn" data-meal="cena" onclick="switchMeal('cena')">
+        <span class="meal-icon">🌙</span>Cena
+      </button>
     </div>
   </div>
 </div>
 
+<!-- STICKY NAV -->
+<nav class="sticky-nav" aria-label="Navigazione menù">
+  <div class="sticky-nav-inner" id="navInner">
+    <!-- Pranzo tabs -->
+    <span class="nav-group" data-meal="pranzo">
+      <button class="nav-tab active" data-target="ll-condividi">Condividi</button>
+      <button class="nav-tab" data-target="ll-primi">Primi</button>
+      <button class="nav-tab" data-target="ll-insalatone">Insalatone</button>
+      <button class="nav-tab" data-target="ll-griglia">Griglia</button>
+      <button class="nav-tab" data-target="ll-contorni">Contorni</button>
+    </span>
+    <!-- Cena tabs (hidden by default) -->
+    <span class="nav-group hidden" data-meal="cena">
+      <button class="nav-tab" data-target="condividi">Condividi</button>
+      <button class="nav-tab" data-target="primi">Primi Piatti</button>
+      <button class="nav-tab" data-target="hamburger">Hamburger</button>
+      <button class="nav-tab" data-target="pinse">Pinse</button>
+      <button class="nav-tab" data-target="griglia">Griglia</button>
+      <button class="nav-tab" data-target="insalatone">Insalatone</button>
+      <button class="nav-tab" data-target="contorni">Contorni</button>
+    </span>
+    <!-- Always visible tabs -->
+    <button class="nav-tab" data-target="dolci">Dolci</button>
+    <button class="nav-tab" data-target="caffe">Caffè</button>
+    <button class="nav-tab" data-target="cocktail">Cocktail</button>
+    <button class="nav-tab" data-target="gin">Gin Tonic</button>
+    <button class="nav-tab" data-target="vini">Vini</button>
+    <button class="nav-tab" data-target="birre">Birre</button>
+    <button class="nav-tab" data-target="allergeni">⚠️</button>
+  </div>
+</nav>
+
 <main class="main">
 
-<!-- ===== CONDIVIDI ===== -->
-<section class="menu-section" id="condividi">
-  <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
-    <span class="section-icon">🥗</span>
-    <span class="section-title">Condividi</span>
-    <span class="section-count">8 piatti</span>
-    <span class="section-chevron">▾</span>
-  </button>
-  <div class="section-body">
-    <div class="section-body-inner">
-      <div class="dish-grid">
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Carpaccio del Bosco</span><span class="dish-price">15€</span></div><p class="dish-desc">Carpaccio di manzo al ginepro e odori toscani, ricotta condita, capperi in fiore e salsa di mele e senape</p><p class="dish-allergens">Allergeni: 7, 9</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Degustazione di Battute al Coltello</span><span class="dish-price">18€</span></div><p class="dish-desc">Servite con maionese all'aglio nero e cipolla croccante, burrata e tartufo nero</p><p class="dish-allergens">Allergeni: 3, 5, 7, 8</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Pimp My Caprese</span><span class="dish-price">12€</span></div><p class="dish-desc">Caprese di bufala, pomodorini gialli e rossi, chips di basilico e pesto di basilico</p><p class="dish-allergens">Allergeni: 7, 8</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Coccole, Crudo &amp; Burrata</span><span class="dish-price">12€</span></div><p class="dish-desc">Coccole, prosciutto crudo stagionato e burratina</p><p class="dish-allergens">Allergeni: 1, 3, 7</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Melanzana alla Issi</span><span class="dish-price">14€</span></div><p class="dish-desc">Barchetta di melanzana alla parmigiana con provola affumicata e pesto verde</p><p class="dish-allergens">Allergeni: 3, 5, 7</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Burro e Acciughe 2.0</span><span class="dish-price">13€</span></div><p class="dish-desc">Pan bauletto croccante dorato nel burro, alici sotto pesto e salsa agli agrumi</p><p class="dish-allergens">Allergeni: 1, 3, 5, 7</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Frittino del Poggio</span><span class="dish-price">18€</span></div><p class="dish-desc">Fiori di zucca ripieni di ricotta e mentuccia, salvia fritta, pane toscano, pappa al pomodoro, pollo crispy alla paprika con mayo al gin e pepe rosa</p><p class="dish-allergens">Allergeni: 1, 3, 7, 8</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Gran Tagliere del Poggio</span><span class="dish-price">30€</span></div><p class="dish-desc">Selezione di salumi e pecorini con mostarde, assaggio dei nostri antipasti e tipicità del luogo</p><p class="dish-allergens">Allergeni: 1, 3, 7, 8</p></div>
-      </div>
-      <div class="pairing-box">
-        <strong>Abbinamenti consigliati dal Gingegnere</strong>
-        <div class="pairing-item">Carpaccio di Manzo → G&amp;T con Rame Italian Dry</div>
-        <div class="pairing-item">Fritto del Poggio → G&amp;T con Barbarasa London Dry</div>
+<!-- ================= PRANZO PANEL ================= -->
+<div class="meal-panel active" id="panel-pranzo">
+
+  <!-- LIGHT LUNCH CONDIVIDI -->
+  <section class="menu-section" id="ll-condividi">
+    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
+      <span class="section-icon">🥗</span>
+      <span class="section-title">Condividi — Light Lunch</span>
+      <span class="section-badge">6 piatti</span>
+      <span class="section-chevron">▾</span>
+    </button>
+    <div class="section-body">
+      <div class="section-body-inner">
+        <div class="dish-grid">
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Carpaccio del Bosco</span><span class="dish-price">15€</span></div><p class="dish-desc">Carpaccio di manzo al ginepro e odori toscani, ricotta condita, capperi in fiore e salsa di mele e senape</p><p class="dish-allergens">Allergeni: 7, 9</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Degustazione di Battute al Coltello</span><span class="dish-price">18€</span></div><p class="dish-desc">Maionese all'aglio nero e cipolla croccante; burrata e tartufo nero</p><p class="dish-allergens">Allergeni: 3, 5, 7, 8</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Pimp My Caprese</span><span class="dish-price">12€</span></div><p class="dish-desc">Caprese di bufala, pomodorini gialli e rossi, chips di basilico e pesto di basilico</p><p class="dish-allergens">Allergeni: 7, 8</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Melanzana alla Issi</span><span class="dish-price">14€</span></div><p class="dish-desc">Barchetta di melanzana alla parmigiana con provola affumicata e pesto verde</p><p class="dish-allergens">Allergeni: 3, 5, 7</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Burro e Acciughe 2.0</span><span class="dish-price">13€</span></div><p class="dish-desc">Pan bauletto croccante dorato nel burro, acciughe sotto pesto e salsa agli agrumi</p><p class="dish-allergens">Allergeni: 1, 3, 5, 7</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Gran Tagliere del Poggio</span><span class="dish-price">30€</span></div><p class="dish-desc">Selezione di salumi e pecorini con mostarde, assaggio dei nostri antipasti e tipicità del luogo</p><p class="dish-allergens">Allergeni: 1, 3, 7, 8</p></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== PRIMI ===== -->
-<section class="menu-section" id="primi">
-  <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
-    <span class="section-icon">🍝</span>
-    <span class="section-title">Primi</span>
-    <span class="section-count">5 piatti</span>
-    <span class="section-chevron">▾</span>
-  </button>
-  <div class="section-body">
-    <div class="section-body-inner">
-      <div class="dish-grid">
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Pici al Ragù Toscano</span><span class="dish-price">14€</span></div><p class="dish-desc">Pici fatti a mano con ragù di carne toscano</p><p class="dish-allergens">Allergeni: 1, 3, 8, 9</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Gnocchi di Patate al Pesto Rosso</span><span class="dish-price">12€</span></div><p class="dish-desc">Gnocchi di patate con pesto di pomodori secchi e frutta secca</p><p class="dish-allergens">Allergeni: 1, 3, 7, 8, 9</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Pappardelle al Cinghiale e Cioccolato</span><span class="dish-price">15€</span></div><p class="dish-desc">Pappardelle con ragù di cinghiale e un tocco di cioccolato fondente</p><p class="dish-allergens">Allergeni: 1, 3, 8, 9</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Spaghettone al Pomodoro Fresco</span><span class="dish-price">12€</span></div><p class="dish-desc">Spaghettone con salsa di pomodoro fresco e origano aromatico</p><p class="dish-allergens">Allergeni: 1, 3, 8, 9</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Gnudi di Ricotta e Spinaci</span><span class="dish-price">14€</span></div><p class="dish-desc">Gnudi con crema di pomodorini gialli e ricotta salata grattugiata</p><p class="dish-allergens">Allergeni: 1, 3, 7, 8, 9</p></div>
+  <!-- LIGHT LUNCH PRIMI -->
+  <section class="menu-section" id="ll-primi">
+    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
+      <span class="section-icon">🍝</span>
+      <span class="section-title">Primi</span>
+      <span class="section-badge">5 piatti</span>
+      <span class="section-chevron">▾</span>
+    </button>
+    <div class="section-body">
+      <div class="section-body-inner">
+        <div class="dish-grid">
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Pici al Ragù Toscano</span><span class="dish-price">14€</span></div><p class="dish-desc">Pici fatti a mano con ragù di carne toscano</p><p class="dish-allergens">Allergeni: 1, 3, 8, 9</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Gnocchi di Patate al Pesto Rosso</span><span class="dish-price">12€</span></div><p class="dish-desc">Gnocchi di patate con pesto di pomodori secchi e frutta secca</p><p class="dish-allergens">Allergeni: 1, 3, 7, 8, 9</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Pappardelle al Cinghiale e Cioccolato</span><span class="dish-price">15€</span></div><p class="dish-desc">Pappardelle con ragù di cinghiale e un tocco di cioccolato fondente</p><p class="dish-allergens">Allergeni: 1, 3, 8, 9</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Spaghettone al Pomodoro Fresco e Origano</span><span class="dish-price">12€</span></div><p class="dish-desc">Spaghettone con salsa di pomodoro fresco e origano aromatico</p><p class="dish-allergens">Allergeni: 1, 3, 8, 9</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Gnudi di Ricotta e Spinaci</span><span class="dish-price">14€</span></div><p class="dish-desc">Con crema di pomodorini gialli e ricotta salata grattugiata</p><p class="dish-allergens">Allergeni: 1, 3, 7, 8, 9</p></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== HAMBURGER ===== -->
-<section class="menu-section" id="hamburger">
-  <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
-    <span class="section-icon">🍔</span>
-    <span class="section-title">Hamburger</span>
-    <span class="section-count">5 piatti</span>
-    <span class="section-chevron">▾</span>
-  </button>
-  <div class="section-body">
-    <div class="section-body-inner">
-      <p class="section-note">Tutti accompagnati da patate fritte — Allergeni: 1, 3, 5, 6, 7, 8, 10, 11</p>
-      <div class="dish-grid">
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Polpo Burger</span><span class="dish-price">20€</span></div><p class="dish-desc">Polpo piastrato, spinacino fresco, mayo al gin e pepe rosa, carpaccio di cavolo verza (soia e limone)</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Issi Burger</span><span class="dish-price">17€</span></div><p class="dish-desc">180g di hamburger di scottona, provola affumicata, cipolla caramellata, rigatino croccante, salsa BBQ alla birra e insalatina croccante</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Chicken Burger</span><span class="dish-price">15€</span></div><p class="dish-desc">Pollo croccante alla paprika e pepe rosa, zabaione al gin e agrumi, cavolo viola e pomodorini</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Veggie Burger</span><span class="dish-price">15€</span></div><p class="dish-desc">Pulled pork vegetariano BBQ con salsa di carote e zenzero, cavolo viola marinato, pomodori secchi e cipolla caramellata</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Tartar Burger</span><span class="dish-price">18€</span></div><p class="dish-desc">150g di battuta di manzo, salsa tzatziki, cipolla caramellata, lattughino croccante e pomodori secchi</p></div>
-      </div>
-      <div class="pairing-box">
-        <strong>Abbinamenti consigliati dal Gingegnere</strong>
-        <div class="pairing-item">Polpo Burger → G&amp;T con Poseidon Gin</div>
-        <div class="pairing-item">Chicken Burger → G&amp;T con Arigatuono Gin</div>
+  <!-- LIGHT LUNCH INSALATONE -->
+  <section class="menu-section" id="ll-insalatone">
+    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
+      <span class="section-icon">🥬</span>
+      <span class="section-title">Insalatone</span>
+      <span class="section-badge">4 insalatone</span>
+      <span class="section-chevron">▾</span>
+    </button>
+    <div class="section-body">
+      <div class="section-body-inner">
+        <div class="dish-grid">
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Insalatona del Poggio</span><span class="dish-price">10€</span></div><p class="dish-desc">Cavolo viola, pecorino, noci e miele</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Insalatona di Tonno</span><span class="dish-price">10€</span></div><p class="dish-desc">Tonno, pomodorini, olive</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Insalatona Greca</span><span class="dish-price">10€</span></div><p class="dish-desc">Feta, mais, olive e mozzarelline</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Insalatona dell'Orto</span><span class="dish-price">10€</span></div><p class="dish-desc">Pomodorini, carote, cetrioli, olive e pane croccante</p></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== PINSE ===== -->
-<section class="menu-section" id="pinse">
-  <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
-    <span class="section-icon">🍕</span>
-    <span class="section-title">Pinse</span>
-    <span class="section-count">9 piatti</span>
-    <span class="section-chevron">▾</span>
-  </button>
-  <div class="section-body">
-    <div class="section-body-inner">
-      <p class="section-note">Impasto artigianale di nostra produzione — Allergeni: 1, 5, 6, 7, 8, 9, 11</p>
-      <div class="dish-grid">
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">La Mortazza 2.0</span><span class="dish-price">14€</span></div><p class="dish-desc">Schiacciata, Mortadella, stracciatella, pistacchi e cipolle caramellate</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">La Tartara</span><span class="dish-price">18€</span></div><p class="dish-desc">Schiacciata con tartar, pomodorini freschi, stracciatella, pesto rosso e granella di nocciole</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">La Contadina</span><span class="dish-price">15€</span></div><p class="dish-desc">Pomodoro, mozzarella, salsiccia, ricotta, melanzane condite alla mentuccia e mandorle</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">La Figa &amp; il Manzo</span><span class="dish-price">17€</span></div><p class="dish-desc">Schiacciata con fichi semi-canditi, carpaccio di manzo, pecorino romano, salsa pomodorini gialli e rucola</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">La Scarpetta</span><span class="dish-price">14€</span></div><p class="dish-desc">Mozzarella, ragù toscano, provola affumicata e pecorino romano</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">La 4 Formaggi Pro</span><span class="dish-price">15€</span></div><p class="dish-desc">Mozzarella, gorgonzola, pecorino fresco, pecorino romano, ricotta e cipolle caramellate</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">La Fresca di Zona</span><span class="dish-price">13€</span></div><p class="dish-desc">Pomodoro, mozzarella, pomodorini, pesto di basilico, stracciatella, rucola e pecorino romano</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">La Stracciamare</span><span class="dish-price">14€</span></div><p class="dish-desc">Schiacciata con stracciatella, alici sotto pesto, pomodorini e basilico</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">La Pacco da Giù</span><span class="dish-price">15€</span></div><p class="dish-desc">Pomodoro, mozzarella, nduja, peperone crusco e provola affumicata</p></div>
-      </div>
-      <div class="pairing-box">
-        <strong>Abbinamenti consigliati dal Gingegnere</strong>
-        <div class="pairing-item">La Pacco da Giù → Spicy Paloma</div>
-        <div class="pairing-item">La Stracciamare → Basil Smash</div>
+  <!-- LIGHT LUNCH GRIGLIA -->
+  <section class="menu-section" id="ll-griglia">
+    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
+      <span class="section-icon">🔥</span>
+      <span class="section-title">Griglia</span>
+      <span class="section-badge">6 piatti</span>
+      <span class="section-chevron">▾</span>
+    </button>
+    <div class="section-body">
+      <div class="section-body-inner">
+        <div class="dish-grid">
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Il Pollaccio</span><span class="dish-price">16€</span></div><p class="dish-desc">Galletto cbt alle erbe con il suo ristretto</p><p class="dish-allergens">Allergeni: 7, 8</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Le Rostinciane</span><span class="dish-price">16€</span></div><p class="dish-desc">Costine di maiale in salsa BBQ</p><p class="dish-allergens">Allergeni: 8, 9, 10</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">La Tagliata R&amp;G</span><span class="dish-price">22€</span></div><p class="dish-desc">Tagliata di manzo con rucola e salsa di grana</p><p class="dish-allergens">Allergeni: 7</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">La Tagliata del Poggio</span><span class="dish-price">22€</span></div><p class="dish-desc">Tagliata di manzo con lardo e rosmarino</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">La Picanha</span><span class="dish-price">22€</span></div><p class="dish-desc">Picanha di manzo cbt con il suo ristretto</p><p class="dish-allergens">Allergeni: 7</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Gli Arrosticini</span><span class="dish-price">18€</span></div><p class="dish-desc">Arrosticini di pecora con BBQ alla birra e salsa tzatziki</p><p class="dish-allergens">Allergeni: 5, 7</p></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== GRIGLIA ===== -->
-<section class="menu-section" id="griglia">
-  <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
-    <span class="section-icon">🔥</span>
-    <span class="section-title">Griglia</span>
-    <span class="section-count">6 piatti</span>
-    <span class="section-chevron">▾</span>
-  </button>
-  <div class="section-body">
-    <div class="section-body-inner">
-      <div class="dish-grid">
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Il Pollaccio</span><span class="dish-price">16€</span></div><p class="dish-desc">Galletto cbt alle erbe con il suo ristretto</p><p class="dish-allergens">Allergeni: 7, 8</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Le Rostinciane</span><span class="dish-price">16€</span></div><p class="dish-desc">Costine di maiale in salsa BBQ</p><p class="dish-allergens">Allergeni: 8, 9, 10</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">La Tagliata R&amp;G</span><span class="dish-price">22€</span></div><p class="dish-desc">Tagliata di manzo con rucola e salsa di grana</p><p class="dish-allergens">Allergeni: 7</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">La Tagliata del Poggio</span><span class="dish-price">22€</span></div><p class="dish-desc">Tagliata di manzo con lardo e rosmarino</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">La Picanha</span><span class="dish-price">22€</span></div><p class="dish-desc">Picanha di manzo cbt con il suo ristretto</p><p class="dish-allergens">Allergeni: 7</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Gli Arrosticini</span><span class="dish-price">18€</span></div><p class="dish-desc">Arrosticini di pecora con BBQ alla birra e salsa tzatziki</p><p class="dish-allergens">Allergeni: 5, 7</p></div>
-      </div>
-      <div class="pairing-box">
-        <strong>Abbinamenti consigliati dal Gingegnere</strong>
-        <div class="pairing-item">Arrosticini → G&amp;T con Upperhand Gin</div>
+  <!-- LIGHT LUNCH CONTORNI -->
+  <section class="menu-section" id="ll-contorni">
+    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
+      <span class="section-icon">🥔</span>
+      <span class="section-title">Contorni</span>
+      <span class="section-badge">4 contorni</span>
+      <span class="section-chevron">▾</span>
+    </button>
+    <div class="section-body">
+      <div class="section-body-inner">
+        <div class="simple-list">
+          <div class="simple-item"><span class="simple-item-name">Patate arrosto (a spicchi)</span><span class="simple-item-price">5€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Patate fritte</span><span class="simple-item-price">5€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Insalata mista</span><span class="simple-item-price">5€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Spinacino saltato</span><span class="simple-item-price">5€</span></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== INSALATONE ===== -->
-<section class="menu-section" id="insalatone">
-  <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
-    <span class="section-icon">🥬</span>
-    <span class="section-title">Insalatone</span>
-    <span class="section-count">4 insalatone</span>
-    <span class="section-chevron">▾</span>
-  </button>
-  <div class="section-body">
-    <div class="section-body-inner">
-      <div class="dish-grid">
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Insalatona del Poggio</span><span class="dish-price">10€</span></div><p class="dish-desc">Cavolo viola, pecorino, noci e miele</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Insalatona di Tonno</span><span class="dish-price">10€</span></div><p class="dish-desc">Tonno, pomodorini, olive</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Insalatona Greca</span><span class="dish-price">10€</span></div><p class="dish-desc">Feta, mais, olive e mozzarelline</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Insalatona dell'Orto</span><span class="dish-price">10€</span></div><p class="dish-desc">Pomodorini, carote, cetrioli, olive e pane croccante</p></div>
+</div><!-- /panel-pranzo -->
+
+
+<!-- ================= CENA PANEL ================= -->
+<div class="meal-panel" id="panel-cena">
+
+  <!-- CONDIVIDI -->
+  <section class="menu-section" id="condividi">
+    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
+      <span class="section-icon">🥗</span>
+      <span class="section-title">Condividi</span>
+      <span class="section-badge">8 piatti</span>
+      <span class="section-chevron">▾</span>
+    </button>
+    <div class="section-body">
+      <div class="section-body-inner">
+        <div class="dish-grid">
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Carpaccio del Bosco</span><span class="dish-price">15€</span></div><p class="dish-desc">Carpaccio di manzo al ginepro e odori toscani, ricotta condita, capperi in fiore e salsa di mele e senape</p><p class="dish-allergens">Allergeni: 7, 9</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Degustazione di Battute al Coltello</span><span class="dish-price">18€</span></div><p class="dish-desc">Maionese all'aglio nero e cipolla croccante; burrata e tartufo nero</p><p class="dish-allergens">Allergeni: 3, 5, 7, 8</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Pimp My Caprese</span><span class="dish-price">12€</span></div><p class="dish-desc">Caprese di bufala, pomodorini gialli e rossi, chips di basilico e pesto di basilico</p><p class="dish-allergens">Allergeni: 7, 8</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Coccole, Crudo &amp; Burrata</span><span class="dish-price">12€</span></div><p class="dish-desc">Coccole, prosciutto crudo stagionato e burratina</p><p class="dish-allergens">Allergeni: 1, 3, 7</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Melanzana alla Issi</span><span class="dish-price">14€</span></div><p class="dish-desc">Barchetta di melanzana alla parmigiana con provola affumicata e pesto verde</p><p class="dish-allergens">Allergeni: 3, 5, 7</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Burro e Acciughe 2.0</span><span class="dish-price">13€</span></div><p class="dish-desc">Pan bauletto croccante dorato nel burro, alici sotto pesto e salsa agli agrumi</p><p class="dish-allergens">Allergeni: 1, 3, 5, 7</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Frittino del Poggio</span><span class="dish-price">18€</span></div><p class="dish-desc">Fiori di zucca ripieni di ricotta e mentuccia, salvia fritta, pane toscano, pappa al pomodoro, pollo crispy alla paprika con mayo al gin e pepe rosa</p><p class="dish-allergens">Allergeni: 1, 3, 7, 8</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Gran Tagliere del Poggio</span><span class="dish-price">30€</span></div><p class="dish-desc">Selezione di salumi e pecorini con mostarde, assaggio dei nostri antipasti e tipicità del luogo</p><p class="dish-allergens">Allergeni: 1, 3, 7, 8</p></div>
+        </div>
+        <div class="pairing-box">
+          <strong>Abbinamenti consigliati dal Gingegnere</strong>
+          <div class="pairing-item">Carpaccio di Manzo → G&amp;T con Rame Italian Dry</div>
+          <div class="pairing-item">Fritto del Poggio → G&amp;T con Barbarasa London Dry</div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== CONTORNI ===== -->
-<section class="menu-section" id="contorni">
-  <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
-    <span class="section-icon">🥔</span>
-    <span class="section-title">Contorni</span>
-    <span class="section-count">4 contorni</span>
-    <span class="section-chevron">▾</span>
-  </button>
-  <div class="section-body">
-    <div class="section-body-inner">
-      <div class="simple-list">
-        <div class="simple-item"><span class="simple-item-name">Patate arrosto (a spicchi)</span><span class="simple-item-price">5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Patate fritte</span><span class="simple-item-price">5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Insalata mista</span><span class="simple-item-price">5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Spinacino saltato</span><span class="simple-item-price">5€</span></div>
+  <!-- PRIMI (cena) -->
+  <section class="menu-section" id="primi">
+    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
+      <span class="section-icon">🍝</span>
+      <span class="section-title">Primi Piatti</span>
+      <span class="section-badge">5 piatti</span>
+      <span class="section-chevron">▾</span>
+    </button>
+    <div class="section-body">
+      <div class="section-body-inner">
+        <div class="dish-grid">
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Pici al Ragù Toscano</span><span class="dish-price">14€</span></div><p class="dish-desc">Pici fatti a mano con ragù di carne toscano</p><p class="dish-allergens">Allergeni: 1, 3, 8, 9</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Gnocchi di Patate al Pesto Rosso</span><span class="dish-price">12€</span></div><p class="dish-desc">Gnocchi di patate con pesto di pomodori secchi e frutta secca</p><p class="dish-allergens">Allergeni: 1, 3, 7, 8, 9</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Pappardelle al Cinghiale e Cioccolato</span><span class="dish-price">15€</span></div><p class="dish-desc">Pappardelle con ragù di cinghiale e un tocco di cioccolato fondente</p><p class="dish-allergens">Allergeni: 1, 3, 8, 9</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Spaghettone al Pomodoro Fresco e Origano</span><span class="dish-price">12€</span></div><p class="dish-desc">Spaghettone con salsa di pomodoro fresco e origano aromatico</p><p class="dish-allergens">Allergeni: 1, 3, 8, 9</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Gnudi di Ricotta e Spinaci</span><span class="dish-price">14€</span></div><p class="dish-desc">Con crema di pomodorini gialli e ricotta salata grattugiata</p><p class="dish-allergens">Allergeni: 1, 3, 7, 8, 9</p></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== DOLCI ===== -->
+  <!-- HAMBURGER -->
+  <section class="menu-section" id="hamburger">
+    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
+      <span class="section-icon">🍔</span>
+      <span class="section-title">Hamburger</span>
+      <span class="section-badge">5 piatti</span>
+      <span class="section-chevron">▾</span>
+    </button>
+    <div class="section-body">
+      <div class="section-body-inner">
+        <p class="section-note">Tutti accompagnati da patate fritte — Allergeni: 1, 3, 5, 6, 7, 8, 10, 11</p>
+        <div class="dish-grid">
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Polpo Burger</span><span class="dish-price">20€</span></div><p class="dish-desc">Polpo piastrato, spinacino fresco, mayo al gin e pepe rosa, carpaccio di cavolo verza (soia e limone)</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Issi Burger</span><span class="dish-price">17€</span></div><p class="dish-desc">180g di hamburger di scottona, provola affumicata, cipolla caramellata, rigatino croccante, salsa BBQ alla birra e insalatina croccante</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Chicken Burger</span><span class="dish-price">15€</span></div><p class="dish-desc">Pollo croccante alla paprika e pepe rosa, zabaione al gin e agrumi, cavolo viola e pomodorini</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Veggie Burger</span><span class="dish-price">15€</span></div><p class="dish-desc">Pulled pork vegetariano BBQ con salsa di carote e zenzero, cavolo viola marinato, pomodori secchi e cipolla caramellata</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Tartar Burger</span><span class="dish-price">18€</span></div><p class="dish-desc">150g di battuta di manzo, salsa tzatziki, cipolla caramellata, lattughino croccante e pomodori secchi</p></div>
+        </div>
+        <div class="pairing-box">
+          <strong>Abbinamenti consigliati dal Gingegnere</strong>
+          <div class="pairing-item">Polpo Burger → G&amp;T con Poseidon Gin</div>
+          <div class="pairing-item">Chicken Burger → G&amp;T con Arigatuono Gin</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PINSE -->
+  <section class="menu-section" id="pinse">
+    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
+      <span class="section-icon">🍕</span>
+      <span class="section-title">Pinse</span>
+      <span class="section-badge">9 piatti</span>
+      <span class="section-chevron">▾</span>
+    </button>
+    <div class="section-body">
+      <div class="section-body-inner">
+        <p class="section-note">Impasto artigianale di nostra produzione — Allergeni: 1, 5, 6, 7, 8, 9, 11</p>
+        <div class="dish-grid">
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">La Mortazza 2.0</span><span class="dish-price">14€</span></div><p class="dish-desc">Schiacciata, Mortadella, stracciatella, pistacchi e cipolle caramellate</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">La Tartara</span><span class="dish-price">18€</span></div><p class="dish-desc">Schiacciata con tartar, pomodorini freschi, stracciatella, pesto rosso e granella di nocciole</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">La Contadina</span><span class="dish-price">15€</span></div><p class="dish-desc">Pomodoro, mozzarella, salsiccia, ricotta, melanzane condite alla mentuccia e mandorle</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">La Figa &amp; il Manzo</span><span class="dish-price">17€</span></div><p class="dish-desc">Schiacciata con fichi semi-canditi, carpaccio di manzo, pecorino romano, salsa pomodorini gialli e rucola</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">La Scarpetta</span><span class="dish-price">14€</span></div><p class="dish-desc">Mozzarella, ragù toscano, provola affumicata e pecorino romano</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">La 4 Formaggi Pro</span><span class="dish-price">15€</span></div><p class="dish-desc">Mozzarella, gorgonzola, pecorino fresco, pecorino romano, ricotta e cipolle caramellate</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">La Fresca di Zona</span><span class="dish-price">13€</span></div><p class="dish-desc">Pomodoro, mozzarella, pomodorini, pesto di basilico, stracciatella, rucola e pecorino romano</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">La Stracciamare</span><span class="dish-price">14€</span></div><p class="dish-desc">Schiacciata con stracciatella, alici sotto pesto, pomodorini e basilico</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">La Pacco da Giù</span><span class="dish-price">15€</span></div><p class="dish-desc">Pomodoro, mozzarella, nduja, peperone crusco e provola affumicata</p></div>
+        </div>
+        <div class="pairing-box">
+          <strong>Abbinamenti consigliati dal Gingegnere</strong>
+          <div class="pairing-item">La Pacco da Giù → Spicy Paloma</div>
+          <div class="pairing-item">La Stracciamare → Basil Smash</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRIGLIA (cena) -->
+  <section class="menu-section" id="griglia">
+    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
+      <span class="section-icon">🔥</span>
+      <span class="section-title">Griglia</span>
+      <span class="section-badge">6 piatti</span>
+      <span class="section-chevron">▾</span>
+    </button>
+    <div class="section-body">
+      <div class="section-body-inner">
+        <div class="dish-grid">
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Il Pollaccio</span><span class="dish-price">16€</span></div><p class="dish-desc">Galletto cbt alle erbe con il suo ristretto</p><p class="dish-allergens">Allergeni: 7, 8</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Le Rostinciane</span><span class="dish-price">16€</span></div><p class="dish-desc">Costine di maiale in salsa BBQ</p><p class="dish-allergens">Allergeni: 8, 9, 10</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">La Tagliata R&amp;G</span><span class="dish-price">22€</span></div><p class="dish-desc">Tagliata di manzo con rucola e salsa di grana</p><p class="dish-allergens">Allergeni: 7</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">La Tagliata del Poggio</span><span class="dish-price">22€</span></div><p class="dish-desc">Tagliata di manzo con lardo e rosmarino</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">La Picanha</span><span class="dish-price">22€</span></div><p class="dish-desc">Picanha di manzo cbt con il suo ristretto</p><p class="dish-allergens">Allergeni: 7</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Gli Arrosticini</span><span class="dish-price">18€</span></div><p class="dish-desc">Arrosticini di pecora con BBQ alla birra e salsa tzatziki</p><p class="dish-allergens">Allergeni: 5, 7</p></div>
+        </div>
+        <div class="pairing-box">
+          <strong>Abbinamenti consigliati dal Gingegnere</strong>
+          <div class="pairing-item">Arrosticini → G&amp;T con Upperhand Gin</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSALATONE (cena) -->
+  <section class="menu-section" id="insalatone">
+    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
+      <span class="section-icon">🥬</span>
+      <span class="section-title">Insalatone</span>
+      <span class="section-badge">4 insalatone</span>
+      <span class="section-chevron">▾</span>
+    </button>
+    <div class="section-body">
+      <div class="section-body-inner">
+        <div class="dish-grid">
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Insalatona del Poggio</span><span class="dish-price">10€</span></div><p class="dish-desc">Cavolo viola, pecorino, noci e miele</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Insalatona di Tonno</span><span class="dish-price">10€</span></div><p class="dish-desc">Tonno, pomodorini, olive</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Insalatona Greca</span><span class="dish-price">10€</span></div><p class="dish-desc">Feta, mais, olive e mozzarelline</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Insalatona dell'Orto</span><span class="dish-price">10€</span></div><p class="dish-desc">Pomodorini, carote, cetrioli, olive e pane croccante</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTORNI (cena) -->
+  <section class="menu-section" id="contorni">
+    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
+      <span class="section-icon">🥔</span>
+      <span class="section-title">Contorni</span>
+      <span class="section-badge">4 contorni</span>
+      <span class="section-chevron">▾</span>
+    </button>
+    <div class="section-body">
+      <div class="section-body-inner">
+        <div class="simple-list">
+          <div class="simple-item"><span class="simple-item-name">Patate arrosto (a spicchi)</span><span class="simple-item-price">5€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Patate fritte</span><span class="simple-item-price">5€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Insalata mista</span><span class="simple-item-price">5€</span></div>
+          <div class="simple-item"><span class="simple-item-name">Spinacino saltato</span><span class="simple-item-price">5€</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /panel-cena -->
+
+<!-- ================= SHARED SECTIONS ================= -->
+
+<!-- DOLCI -->
 <section class="menu-section" id="dolci">
   <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
     <span class="section-icon">🍮</span>
     <span class="section-title">Dolci</span>
-    <span class="section-count">4 dolci</span>
+    <span class="section-badge">4 dolci</span>
     <span class="section-chevron">▾</span>
   </button>
   <div class="section-body">
@@ -396,23 +763,22 @@ ul { list-style: none; }
         <div class="dish-card"><div class="dish-top"><span class="dish-name">Tiramisù del Poggio</span><span class="dish-price">6€</span></div><p class="dish-desc">Il nostro tiramisù della casa</p><p class="dish-allergens">Allergeni: 1, 3, 7</p></div>
         <div class="dish-card"><div class="dish-top"><span class="dish-name">Tortino Pere e Cannella</span><span class="dish-price">6€</span></div><p class="dish-desc">Con salsa al caramello salato</p><p class="dish-allergens">Allergeni: 1, 3, 7</p></div>
         <div class="dish-card"><div class="dish-top"><span class="dish-name">Latte in Piedi</span><span class="dish-price">6€</span></div><p class="dish-desc">Tradizionale budino di crema alla vaniglia</p><p class="dish-allergens">Allergeni: 3, 7</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Cremoso al Mango</span><span class="dish-price">6€</span></div><p class="dish-desc">Cremoso al mango e croccante alle mandorle</p><p class="dish-allergens">Allergeni: 3, 7</p></div>
+        <div class="dish-card"><div class="dish-top"><span class="dish-name">Cremoso al Mango</span><span class="dish-price">6€</span></div><p class="dish-desc">Cremoso al mango con croccante alle mandorle</p><p class="dish-allergens">Allergeni: 3, 7</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== CAFFETTERIA & DIGESTIVI ===== -->
+<!-- CAFFETTERIA & DIGESTIVI -->
 <section class="menu-section" id="caffe">
   <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
     <span class="section-icon">☕</span>
     <span class="section-title">Caffetteria &amp; Digestivi</span>
-    <span class="section-count">Caffè · Grappe · Amari · Liquori · Distillati</span>
+    <span class="section-badge">Caffè · Amari · Distillati</span>
     <span class="section-chevron">▾</span>
   </button>
   <div class="section-body">
     <div class="section-body-inner">
-
       <h3 class="sub-title">☕ Caffetteria</h3>
       <div class="simple-list">
         <div class="simple-item"><span class="simple-item-name">Caffè espresso</span><span class="simple-item-price">2€</span></div>
@@ -422,13 +788,11 @@ ul { list-style: none; }
         <div class="simple-item"><span class="simple-item-name">Tè Caldo / Tisana</span><span class="simple-item-price">3€</span></div>
         <div class="simple-item"><span class="simple-item-name">Caffè Shakerato</span><span class="simple-item-price">4€</span></div>
       </div>
-
       <h3 class="sub-title">🍇 Grappe</h3>
       <div class="simple-list">
         <div class="simple-item"><span class="simple-item-name">Grappa di Vernaccia "Il Colombaio"</span><span class="simple-item-price">5€</span></div>
         <div class="simple-item"><span class="simple-item-name">Grappa Riserva "Il Colombaio"</span><span class="simple-item-price">7€</span></div>
       </div>
-
       <h3 class="sub-title">🌿 Amari</h3>
       <div class="simple-list">
         <div class="simple-item"><span class="simple-item-name">Amaro del Capo</span><span class="simple-item-price">4€</span></div>
@@ -438,47 +802,18 @@ ul { list-style: none; }
         <div class="simple-item"><span class="simple-item-name">Jefferson</span><span class="simple-item-price">5€</span></div>
         <div class="simple-item"><span class="simple-item-name">Amari Artigianali</span><span class="simple-item-price">5€</span></div>
       </div>
-
       <h3 class="sub-title">🍬 Liquori</h3>
       <div class="simple-list">
         <div class="simple-item"><span class="simple-item-name">Sambuca</span><span class="simple-item-price">4€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Love Kam. — Liquore al Caramello Salato</span><span class="simple-item-price">4€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Love Kam. — Caramello Salato</span><span class="simple-item-price">4€</span></div>
         <div class="simple-item"><span class="simple-item-name">Baileys</span><span class="simple-item-price">4€</span></div>
         <div class="simple-item"><span class="simple-item-name">PATRON XO — Liquore al Caffè</span><span class="simple-item-price">5€</span></div>
         <div class="simple-item"><span class="simple-item-name">Amaretto di Saronno</span><span class="simple-item-price">4€</span></div>
         <div class="simple-item"><span class="simple-item-name">Limoncello</span><span class="simple-item-price">4€</span></div>
       </div>
-
-      <h3 class="sub-title">🥃 Rum</h3>
-      <div class="simple-list">
-        <div class="simple-item"><span class="simple-item-name">Don Papa</span><span class="simple-item-price">10€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Diplomatico</span><span class="simple-item-price">9€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Zacapa 23</span><span class="simple-item-price">8€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Santa Teresa</span><span class="simple-item-price">8€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Bumbu</span><span class="simple-item-price">7€</span></div>
-      </div>
-
-      <h3 class="sub-title">🌵 Agave — Tequila &amp; Mezcal</h3>
-      <div class="simple-list">
-        <div class="simple-item"><span class="simple-item-name">Tequila Patron Reposado</span><span class="simple-item-price">10€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Tequila Patron Silver</span><span class="simple-item-price">8€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Mezcal Ilegal</span><span class="simple-item-price">8€</span></div>
-      </div>
-
-      <h3 class="sub-title">🧊 Vodka</h3>
-      <div class="simple-list">
-        <div class="simple-item"><span class="simple-item-name">Grey Goose</span><span class="simple-item-price">8€</span></div>
-      </div>
-
-      <h3 class="sub-title">🍾 Brandy &amp; Cognac</h3>
-      <div class="simple-list">
-        <div class="simple-item"><span class="simple-item-name">Vecchia Romagna</span><span class="simple-item-price">4€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Courvoisier VSOP</span><span class="simple-item-price">8€</span></div>
-      </div>
-
       <h3 class="sub-title">🥃 Whisky</h3>
       <div class="simple-list">
-        <div class="simple-item"><span class="simple-item-name">Nikka From the Barrel</span><span class="simple-item-price">12€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Nikka from the Barrel</span><span class="simple-item-price">12€</span></div>
         <div class="simple-item"><span class="simple-item-name">Macallan 12</span><span class="simple-item-price">12€</span></div>
         <div class="simple-item"><span class="simple-item-name">Laphroaig 10</span><span class="simple-item-price">9€</span></div>
         <div class="simple-item"><span class="simple-item-name">Wild Turkey 101</span><span class="simple-item-price">8€</span></div>
@@ -487,17 +822,33 @@ ul { list-style: none; }
         <div class="simple-item"><span class="simple-item-name">Dewar's</span><span class="simple-item-price">5€</span></div>
         <div class="simple-item"><span class="simple-item-name">Jack Daniel's</span><span class="simple-item-price">4€</span></div>
       </div>
-
+      <h3 class="sub-title">🌵 Agave &amp; Rum</h3>
+      <div class="simple-list">
+        <div class="simple-item"><span class="simple-item-name">Tequila Patron Reposado</span><span class="simple-item-price">10€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Tequila Patron Silver</span><span class="simple-item-price">8€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Mezcal Ilegal</span><span class="simple-item-price">8€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Don Papa Rum</span><span class="simple-item-price">10€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Diplomatico</span><span class="simple-item-price">9€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Zacapa 23</span><span class="simple-item-price">8€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Santa Teresa</span><span class="simple-item-price">8€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Bumbu</span><span class="simple-item-price">7€</span></div>
+      </div>
+      <h3 class="sub-title">✨ Altro</h3>
+      <div class="simple-list">
+        <div class="simple-item"><span class="simple-item-name">Grey Goose Vodka</span><span class="simple-item-price">8€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Vecchia Romagna</span><span class="simple-item-price">4€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Courvoisier VSOP</span><span class="simple-item-price">8€</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== COCKTAIL ===== -->
+<!-- COCKTAIL -->
 <section class="menu-section" id="cocktail">
   <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
     <span class="section-icon">🍸</span>
     <span class="section-title">Cocktail</span>
-    <span class="section-count">14 classici · 8 premium · 4 analcolici</span>
+    <span class="section-badge">Classici · Premium</span>
     <span class="section-chevron">▾</span>
   </button>
   <div class="section-body">
@@ -505,233 +856,182 @@ ul { list-style: none; }
       <h3 class="sub-title">Classici</h3>
       <div class="dish-grid">
         <div class="dish-card"><div class="dish-top"><span class="dish-name">Sprissi</span><span class="dish-price">9€</span></div><p class="dish-desc">Bitter Martini Riserva, pompelmo rosa Dandy, Spumante Lumis</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Spritz Aperol / Campari</span><span class="dish-price">8€</span></div></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Hugo Spritz</span><span class="dish-price">10€</span></div><p class="dish-desc">St. Germain, prosecco, soda, menta fresca</p></div>
+        <div class="dish-card"><div class="dish-top"><span class="dish-name">Spritz Aperol / Campari</span><span class="dish-price">8€</span></div><p class="dish-desc">Il classico aperitivo italiano</p></div>
+        <div class="dish-card"><div class="dish-top"><span class="dish-name">Hugo Spritz</span><span class="dish-price">10€</span></div><p class="dish-desc">St. Germain (sambuco), prosecco, soda, menta fresca</p></div>
         <div class="dish-card"><div class="dish-top"><span class="dish-name">Americano</span><span class="dish-price">8€</span></div><p class="dish-desc">Bitter Martini Riserva, Vermouth rosso Martini, soda</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Negroni</span><span class="dish-price">8€</span></div><p class="dish-desc">Bombay Sapphire Gin, Bitter Martini Riserva, Vermouth rosso Martini</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Basil Smash</span><span class="dish-price">10€</span></div><p class="dish-desc">Bombay Sapphire Gin, limone, zucchero, basilico fresco</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Paloma</span><span class="dish-price">10€</span></div><p class="dish-desc">Tequila Cazadores, lime, sciroppo di agave, pompelmo rosa Dandy, crusta di sale</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Margarita</span><span class="dish-price">10€</span></div><p class="dish-desc">Tequila Cazadores, Triplesec, lime, sciroppo di agave</p></div>
+        <div class="dish-card"><div class="dish-top"><span class="dish-name">Negroni</span><span class="dish-price">8€</span></div><p class="dish-desc">Bombay Sapphire, Bitter Martini Riserva, Vermouth rosso Martini</p></div>
+        <div class="dish-card"><div class="dish-top"><span class="dish-name">Basil Smash</span><span class="dish-price">10€</span></div><p class="dish-desc">Bombay Sapphire, limone, zucchero, basilico fresco</p></div>
+        <div class="dish-card"><div class="dish-top"><span class="dish-name">Paloma</span><span class="dish-price">10€</span></div><p class="dish-desc">Tequila Cazadores, lime, sciroppo d'agave, pompelmo rosa Dandy, crusta di sale</p></div>
+        <div class="dish-card"><div class="dish-top"><span class="dish-name">Margarita</span><span class="dish-price">10€</span></div><p class="dish-desc">Tequila Cazadores, Triplesec, lime, sciroppo d'agave</p></div>
         <div class="dish-card"><div class="dish-top"><span class="dish-name">Mojito</span><span class="dish-price">10€</span></div><p class="dish-desc">Rum Bacardi Carta Blanca, lime, menta fresca, zucchero, soda</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Tropical Daiquiri Frozen</span><span class="dish-price">10€</span></div><p class="dish-desc">Rum Bacardi, lime, purea di mango e passion fruit</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Piña Colada</span><span class="dish-price">10€</span></div><p class="dish-desc">Rum Bacardi carta oro, ananas, cocco, lime</p></div>
+        <div class="dish-card"><div class="dish-top"><span class="dish-name">Tropical Daiquiri Frozen</span><span class="dish-price">10€</span></div><p class="dish-desc">Rum Bacardi Carta Blanca, lime, purea di mango e passion fruit</p></div>
+        <div class="dish-card"><div class="dish-top"><span class="dish-name">Piña Colada</span><span class="dish-price">10€</span></div><p class="dish-desc">Rum Bacardi Carta Oro, ananas, cocco, lime</p></div>
         <div class="dish-card"><div class="dish-top"><span class="dish-name">Moscow Mule</span><span class="dish-price">10€</span></div><p class="dish-desc">Vodka Eristoff, lime, Ginger Beer Dandy</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Whisky Sour</span><span class="dish-price">10€</span></div><p class="dish-desc">Bulleit Rye Whiskey, limone, zucchero, foamer</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Fernandito</span><span class="dish-price">8€</span></div><p class="dish-desc">Fernet Branca, coca cola, lime</p></div>
+        <div class="dish-card"><div class="dish-top"><span class="dish-name">Whisky Sour</span><span class="dish-price">10€</span></div><p class="dish-desc">Bulleit Rye, limone, zucchero, foamer</p></div>
+        <div class="dish-card"><div class="dish-top"><span class="dish-name">Fernandito</span><span class="dish-price">8€</span></div><p class="dish-desc">Fernet Branca, Coca Cola, lime</p></div>
       </div>
-      <h3 class="sub-title">⭐ I Premium del Poggio</h3>
+
+      <h3 class="sub-title">🌟 I Premium del Poggio</h3>
       <div class="dish-grid">
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Sua Maestà il Martini</span><span class="dish-price">12€</span></div><p class="dish-desc">Frantuono gin all'olio d'oliva, vermouth ambrato Martini riserva, olive</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Negroni Fumè</span><span class="dish-price">12€</span></div><p class="dish-desc">Maite Fiamma Gin, Mezcal, Bitter Martini Riserva, vermouth Rubino, rosmarino affumicato</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Spicy Paloma</span><span class="dish-price">12€</span></div><p class="dish-desc">Tequila Patron Reposado, liquore allo Jalapeño, lime, sciroppo di agave, pompelmo rosa, tabasco verde</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Issi Margarita</span><span class="dish-price">12€</span></div><p class="dish-desc">Tequila Patron Reposado, Mezcal, lime, sciroppo di agave</p></div>
+        <div class="dish-card"><div class="dish-top"><span class="dish-name">Sua Maestà il Martini</span><span class="dish-price">12€</span></div><p class="dish-desc">Frantuono gin all'olio d'oliva, Vermouth ambrato Martini Riserva, olive</p></div>
+        <div class="dish-card"><div class="dish-top"><span class="dish-name">Negroni Fumé</span><span class="dish-price">12€</span></div><p class="dish-desc">Maite Fiamma Gin, Mezcal, Bitter Martini Riserva, Vermouth Martini Rubino Riserva, rosmarino affumicato</p></div>
+        <div class="dish-card"><div class="dish-top"><span class="dish-name">Spicy Paloma</span><span class="dish-price">12€</span></div><p class="dish-desc">Tequila Patron Reposado, liquore allo Jalapeño, lime, agave, pompelmo rosa Dandy, tabasco verde</p></div>
+        <div class="dish-card"><div class="dish-top"><span class="dish-name">Issi Margarita</span><span class="dish-price">12€</span></div><p class="dish-desc">Tequila Patron Reposado, Mezcal, lime, sciroppo d'agave</p></div>
         <div class="dish-card"><div class="dish-top"><span class="dish-name">Jungle Bird</span><span class="dish-price">12€</span></div><p class="dish-desc">Rum Jamaicano, bitter fusetti alla banana, ananas, zucchero, lime</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Espresso Mentini</span><span class="dish-price">12€</span></div><p class="dish-desc">Grey Goose vodka, caffè espresso, PATRON XO, zucchero, menta fresca</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Issi Sour</span><span class="dish-price">12€</span></div><p class="dish-desc">Bourbon Wild Turkey 101, limone, zucchero, Chianti di San Gimignano, foamer</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Paper Plane</span><span class="dish-price">12€</span></div><p class="dish-desc">Bulleit Bourbon Whiskey, limone, Aperol, amaro Jefferson</p></div>
+        <div class="dish-card"><div class="dish-top"><span class="dish-name">Espresso Mentini</span><span class="dish-price">12€</span></div><p class="dish-desc">Grey Goose Vodka, caffè espresso, Patron XO, zucchero, menta fresca</p></div>
+        <div class="dish-card"><div class="dish-top"><span class="dish-name">Issi Sour</span><span class="dish-price">12€</span></div><p class="dish-desc">Wild Turkey 101 Bourbon, limone, zucchero, Chianti di San Gimignano, foamer</p></div>
+        <div class="dish-card"><div class="dish-top"><span class="dish-name">Paper Plane</span><span class="dish-price">12€</span></div><p class="dish-desc">Bulleit Bourbon, limone, Aperol, Amaro Jefferson</p></div>
       </div>
-      <h3 class="sub-title">🍹 Analcolici</h3>
-      <div class="dish-grid">
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Sprissi Zero</span><span class="dish-price">7€</span></div><p class="dish-desc">Bitter Martini Vibrante, soda al pompelmo rosa Dandy</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Il Floreale</span><span class="dish-price">7€</span></div><p class="dish-desc">Bitter Martini Floreale, succo di mela verde, soda</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Il Fruttato</span><span class="dish-price">6€</span></div><p class="dish-desc">Succo d'arancia, succo d'ananas, Granatina</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Mojito Zero</span><span class="dish-price">8€</span></div><p class="dish-desc">Lime, menta fresca, zucchero, Ginger Beer Dandy, soda</p></div>
+
+      <h3 class="sub-title">🍃 Analcolici</h3>
+      <div class="simple-list">
+        <div class="simple-item"><span class="simple-item-name">Sprissi Zero — Bitter Martini Vibrante, soda pompelmo</span><span class="simple-item-price">7€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Il Floreale — Bitter Martini Floreale, mela verde, soda</span><span class="simple-item-price">7€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Il Fruttato — Arancia, ananas, granatina</span><span class="simple-item-price">6€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Mojito Zero — Lime, menta, ginger beer, soda</span><span class="simple-item-price">8€</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== GIN TONIC ===== -->
+<!-- GIN TONIC -->
 <section class="menu-section" id="gin">
   <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
-    <span class="section-icon">🫧</span>
-    <span class="section-title">Gin Tonic</span>
-    <span class="section-count">20 gin</span>
+    <span class="section-icon">🫙</span>
+    <span class="section-title">Gin Tonic — Selezione del Gingegnere</span>
+    <span class="section-badge">20 gin</span>
     <span class="section-chevron">▾</span>
   </button>
   <div class="section-body">
     <div class="section-body-inner">
-      <p class="section-note">Tutti con tonica artigianale italiana <strong>Dandy Classic Touch</strong> o <em>Dandy Zero Zuccheri</em>.</p>
-      <div class="dish-grid">
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Bombay Dry</span><span class="dish-price">8€</span></div><p class="dish-desc">Secco, classico, pulito</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Bombay Sapphire</span><span class="dish-price">9€</span></div><p class="dish-desc">Secco, speziato, leggermente agrumato e floreale</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Tanqueray Ten</span><span class="dish-price">10€</span></div><p class="dish-desc">Secco, pulito, classico, agrumato</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Monkey 47</span><span class="dish-price">14€</span></div><p class="dish-desc">Complesso, morbido, speziato, elegante</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Ciauru — Pompelmo Rosa 🇮🇹</span><span class="dish-price">10€</span></div><p class="dish-desc">Fresco, estivo, pompelmo rosa vero!</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Rame Italian Dry 🇮🇹</span><span class="dish-price">10€</span></div><p class="dish-desc">Mediterraneo, aromatico, leggermente agrumato</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Rame London Dry 🇮🇹</span><span class="dish-price">10€</span></div><p class="dish-desc">Secco, speziato, pepato</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Piero Dry Gin 🇮🇹</span><span class="dish-price">12€</span></div><p class="dish-desc">Morbido, elegante, speziato</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Barbarasa London Dry 🇮🇹</span><span class="dish-price">10€</span></div><p class="dish-desc">Secco, aromatico, agrumato</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Barbarasa Navy 🇮🇹</span><span class="dish-price">12€</span></div><p class="dish-desc">Secco, deciso, molto agrumato</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Maite Spiaggialunga 🇮🇹</span><span class="dish-price">12€</span></div><p class="dish-desc">Aromatico, mediterraneo, leggermente speziato</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Maite Fiamma 🇮🇹</span><span class="dish-price">12€</span></div><p class="dish-desc">Secco, complesso, leggermente affumicato</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Upperhand</span><span class="dish-price">10€</span></div><p class="dish-desc">Fresco, estivo, morbido, sentori di basilico e limone</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Hendrick's</span><span class="dish-price">10€</span></div><p class="dish-desc">Fresco, aromatico, floreale</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Nordes</span><span class="dish-price">10€</span></div><p class="dish-desc">Morbido, fresco, fruttato</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">J Rose 🇮🇹</span><span class="dish-price">12€</span></div><p class="dish-desc">Floreale, fruttato, leggermente agrumato e speziato</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Poseidon 🇮🇹</span><span class="dish-price">12€</span></div><p class="dish-desc">Marino, fresco, agrumato</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Brockman's</span><span class="dish-price">10€</span></div><p class="dish-desc">Morbido, frutti rossi</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Arigatuono 🇮🇹</span><span class="dish-price">12€</span></div><p class="dish-desc">Stile giapponese, elegante, pulito, agrumato, leggermente speziato</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Frantuono 🇮🇹</span><span class="dish-price">12€</span></div><p class="dish-desc">Morbido, delicato, mediterraneo, sentori di oliva</p></div>
+      <p class="section-note">Tutti i gin sono serviti con tonica artigianale italiana "Dandy Classic Touch" — disponibile anche "Dandy Zero Zuccheri"</p>
+      <div class="gin-list">
+        <div class="gin-item"><span class="gin-num">1</span><div class="gin-info"><span class="gin-name">Bombay Dry</span><span class="gin-profile">Secco, classico, pulito</span></div><span class="gin-price">8€</span></div>
+        <div class="gin-item"><span class="gin-num">2</span><div class="gin-info"><span class="gin-name">Bombay Sapphire</span><span class="gin-profile">Secco, speziato, leggermente agrumato e floreale</span></div><span class="gin-price">9€</span></div>
+        <div class="gin-item"><span class="gin-num">3</span><div class="gin-info"><span class="gin-name">Tanqueray Ten</span><span class="gin-profile">Secco, pulito, classico, agrumato</span></div><span class="gin-price">10€</span></div>
+        <div class="gin-item"><span class="gin-num">4</span><div class="gin-info"><span class="gin-name">Monkey 47</span><span class="gin-profile">Complesso, morbido, speziato, elegante</span></div><span class="gin-price">14€</span></div>
+        <div class="gin-item"><span class="gin-num">5</span><div class="gin-info"><span class="gin-name">Ciauru Gin — Pompelmo Rosa</span><span class="gin-profile">Fresco, estivo, pompelmo rosa vero</span></div><span class="gin-price">10€</span></div>
+        <div class="gin-item"><span class="gin-num">6</span><div class="gin-info"><span class="gin-name">Rame Italian Dry</span><span class="gin-profile">Mediterraneo, aromatico, leggermente agrumato</span></div><span class="gin-price">10€</span></div>
+        <div class="gin-item"><span class="gin-num">7</span><div class="gin-info"><span class="gin-name">Rame London Dry</span><span class="gin-profile">Secco, speziato, pepato</span></div><span class="gin-price">10€</span></div>
+        <div class="gin-item"><span class="gin-num">8</span><div class="gin-info"><span class="gin-name">Piero Dry Gin</span><span class="gin-profile">Morbido, elegante, speziato</span></div><span class="gin-price">12€</span></div>
+        <div class="gin-item"><span class="gin-num">9</span><div class="gin-info"><span class="gin-name">Barbarasa London Dry</span><span class="gin-profile">Secco, aromatico, agrumato</span></div><span class="gin-price">10€</span></div>
+        <div class="gin-item"><span class="gin-num">10</span><div class="gin-info"><span class="gin-name">Barbarasa Navy</span><span class="gin-profile">Secco, deciso, molto agrumato</span></div><span class="gin-price">12€</span></div>
+        <div class="gin-item"><span class="gin-num">11</span><div class="gin-info"><span class="gin-name">Maite Spiaggialunga</span><span class="gin-profile">Aromatico, mediterraneo, leggermente speziato</span></div><span class="gin-price">12€</span></div>
+        <div class="gin-item"><span class="gin-num">12</span><div class="gin-info"><span class="gin-name">Maite Fiamma</span><span class="gin-profile">Secco, complesso, leggermente affumicato</span></div><span class="gin-price">12€</span></div>
+        <div class="gin-item"><span class="gin-num">13</span><div class="gin-info"><span class="gin-name">Upperhand</span><span class="gin-profile">Fresco, estivo, morbido — sentori di basilico e limone</span></div><span class="gin-price">10€</span></div>
+        <div class="gin-item"><span class="gin-num">14</span><div class="gin-info"><span class="gin-name">Hendrick's</span><span class="gin-profile">Fresco, aromatico, floreale</span></div><span class="gin-price">10€</span></div>
+        <div class="gin-item"><span class="gin-num">15</span><div class="gin-info"><span class="gin-name">Nordés</span><span class="gin-profile">Morbido, fresco, fruttato</span></div><span class="gin-price">10€</span></div>
+        <div class="gin-item"><span class="gin-num">16</span><div class="gin-info"><span class="gin-name">J Rose</span><span class="gin-profile">Floreale, fruttato, leggermente agrumato e speziato</span></div><span class="gin-price">12€</span></div>
+        <div class="gin-item"><span class="gin-num">17</span><div class="gin-info"><span class="gin-name">Poseidon</span><span class="gin-profile">Marino, fresco, agrumato</span></div><span class="gin-price">12€</span></div>
+        <div class="gin-item"><span class="gin-num">18</span><div class="gin-info"><span class="gin-name">Brockman's</span><span class="gin-profile">Morbido, frutti rossi</span></div><span class="gin-price">10€</span></div>
+        <div class="gin-item"><span class="gin-num">19</span><div class="gin-info"><span class="gin-name">Arigatuono</span><span class="gin-profile">Stile giapponese — elegante, pulito, agrumato, speziato</span></div><span class="gin-price">12€</span></div>
+        <div class="gin-item"><span class="gin-num">20</span><div class="gin-info"><span class="gin-name">Frantuono</span><span class="gin-profile">Morbido, delicato, mediterraneo — sentori di oliva</span></div><span class="gin-price">12€</span></div>
       </div>
-      <div class="pairing-box">
-        <strong>🧑‍🔬 Selezione by il Gingegnere</strong>
-        <p style="color:rgba(255,255,255,0.85);font-size:0.82rem;margin-top:4px;">Abbiamo altri gin in costante aggiornamento — chiedi e ti guidiamo! — 10€</p>
-      </div>
+      <p class="section-note" style="margin-top: 0.85rem;">Abbiamo molti altri gin in costante aggiornamento — chiedi al Gingegnere! 10€</p>
     </div>
   </div>
 </section>
 
-<!-- ===== VINI (con sotto-accordion) ===== -->
+<!-- VINI -->
 <section class="menu-section" id="vini">
   <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
     <span class="section-icon">🍷</span>
-    <span class="section-title">Vini</span>
-    <span class="section-count">Bianchi · Bollicine · Rosati · Rossi · Vini Dolci</span>
+    <span class="section-title">Carta dei Vini</span>
+    <span class="section-badge">Bianchi · Rossi · Bollicine</span>
     <span class="section-chevron">▾</span>
   </button>
   <div class="section-body">
     <div class="section-body-inner">
-
-      <!-- BIANCHI -->
+      <!-- Bianchi -->
       <div class="sub-accordion">
         <button class="sub-trigger" onclick="toggleSub(this)" aria-expanded="false">
-          <span class="sub-trigger-icon">🍋</span>
-          <span class="sub-trigger-title">Bianchi</span>
+          <span class="sub-trigger-title">🥂 Bianchi &amp; Bollicine</span>
           <span class="sub-trigger-chevron">▾</span>
         </button>
         <div class="sub-body">
           <div class="sub-body-inner">
             <div class="wine-list">
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Vernaccia di SG DOCG "Selvabianca"</div><div class="wine-producer">Il Colombaio di S. Chiara — 100% Vernaccia</div></div><div class="wine-price">24€ / 6€ cal.</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Vernaccia di SG DOCG "Albereta"</div><div class="wine-producer">Il Colombaio di S. Chiara — 100% Vernaccia</div></div><div class="wine-price">46€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Alto Adige Chardonnay "Schwarzhaus"</div><div class="wine-producer">Stroblhof — 100% Chardonnay</div></div><div class="wine-price">30€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Alto Adige Sauvignon "Nico"</div><div class="wine-producer">Stroblhof — 100% Sauvignon</div></div><div class="wine-price">32€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Alto Adige Valle Isarco "Kerner"</div><div class="wine-producer">Taschlerhof — 100% Kerner</div></div><div class="wine-price">28€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Alto Adige "Gewurztraminer"</div><div class="wine-producer">Taschlerhof — 100% Gewurztraminer</div></div><div class="wine-price">32€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Riesling Wehlener Sonnenuhr Spätlese Trocken</div><div class="wine-producer">Kerpen — 100% Riesling</div></div><div class="wine-price">30€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Soave Classico DOC</div><div class="wine-producer">Pieropan — 85% Garganega 15% Trebbiano</div></div><div class="wine-price">24€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Lugana DOC "Capotesta"</div><div class="wine-producer">Cascina Maddalena — 100% Turbiana</div></div><div class="wine-price">26€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Vermentino Colli di Luni DOC</div><div class="wine-producer">Ottaviano Lambruschi — 100% Vermentino</div></div><div class="wine-price">26€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Fiano Avellino DOCG</div><div class="wine-producer">Colli di Lapio — 100% Fiano</div></div><div class="wine-price">28€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Etna Bianco DOC</div><div class="wine-producer">Benanti — 100% Carricante</div></div><div class="wine-price">33€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">IGT Toscana "Fonteuva" Bianco</div><div class="wine-producer">Il Colombaio — Vernaccia, Vermentino, Malvasia</div></div><div class="wine-price">18€ / 5€ cal.</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Vernaccia di SG DOCG "Selvabianca"</div><div class="wine-producer">Il Colombaio di Santa Chiara · 100% Vernaccia</div></div><div class="wine-price">24€ / 6€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Vernaccia di SG DOCG "Albereta"</div><div class="wine-producer">Il Colombaio di Santa Chiara · 100% Vernaccia</div></div><div class="wine-price">46€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Alto Adige Chardonnay "Schwarzhaus"</div><div class="wine-producer">Stroblhof · 100% Chardonnay</div></div><div class="wine-price">30€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Alto Adige Sauvignon "Nico"</div><div class="wine-producer">Stroblhof · 100% Sauvignon</div></div><div class="wine-price">32€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Alto Adige Valle Isarco "Kerner"</div><div class="wine-producer">Taschlerhof · 100% Kerner</div></div><div class="wine-price">28€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Alto Adige Valle Isarco "Gewurztraminer"</div><div class="wine-producer">Taschlerhof · 100% Gewurztraminer</div></div><div class="wine-price">32€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Riesling Wehlener Sonnenuhr Spätlese</div><div class="wine-producer">Kerpen · 100% Riesling</div></div><div class="wine-price">30€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Soave Classico DOC</div><div class="wine-producer">Pieropan · 85% Garganega 15% Trebbiano</div></div><div class="wine-price">24€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Lugana DOC "Capotesta"</div><div class="wine-producer">Cascina Maddalena · 100% Turbiana</div></div><div class="wine-price">26€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Vermentino Colli di Luni DOC</div><div class="wine-producer">Ottaviano Lambruschi · 100% Vermentino</div></div><div class="wine-price">26€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Fiano Avellino DOCG</div><div class="wine-producer">Colli di Lapio · 100% Fiano di Avellino</div></div><div class="wine-price">28€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Etna Bianco DOC</div><div class="wine-producer">Benanti · 100% Carricante</div></div><div class="wine-price">33€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">IGT Toscana "Fonteuva" Bianco</div><div class="wine-producer">Il Colombaio di Santa Chiara · Vernaccia, Vermentino, Malvasia</div></div><div class="wine-price">18€ / 5€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Spumante Brut "Lumis"</div><div class="wine-producer">Il Colombaio · 80% Vernaccia 20% Chardonnay</div></div><div class="wine-price">24€ / 6€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Spumante Brut "Lumis" Magnum</div><div class="wine-producer">Il Colombaio · 80% Vernaccia 20% Chardonnay</div></div><div class="wine-price">54€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Spumante Brut "Lumis" Rosé</div><div class="wine-producer">Il Colombaio · 100% Sangiovese</div></div><div class="wine-price">26€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Altalanga Extra Brut</div><div class="wine-producer">Ettore Germano · 80% Pinot Nero 20% Chardonnay</div></div><div class="wine-price">40€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Trento DOC "Perlè"</div><div class="wine-producer">Ferrari · 100% Chardonnay</div></div><div class="wine-price">60€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Crémant d'Alsace Millésime Brut</div><div class="wine-producer">Dirler-Cadé · Pinot Nero / Pinot Gris / Auxerrois</div></div><div class="wine-price">40€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Champagne "Zero"</div><div class="wine-producer">Tarlant · Pinot Nero / Chardonnay / Meunier / Petit Meslier</div></div><div class="wine-price">95€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Rosé IGT "Cremisi"</div><div class="wine-producer">Il Colombaio · 100% Sangiovese</div></div><div class="wine-price">24€ / 6€</div></div>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- BOLLICINE -->
+      <!-- Rossi -->
       <div class="sub-accordion">
         <button class="sub-trigger" onclick="toggleSub(this)" aria-expanded="false">
-          <span class="sub-trigger-icon">🫧</span>
-          <span class="sub-trigger-title">Bollicine</span>
+          <span class="sub-trigger-title">🍷 Rossi &amp; Passiti</span>
           <span class="sub-trigger-chevron">▾</span>
         </button>
         <div class="sub-body">
           <div class="sub-body-inner">
             <div class="wine-list">
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Spumante Brut "Lumis"</div><div class="wine-producer">Il Colombaio — 80% Vernaccia 20% Chardonnay</div></div><div class="wine-price">24€ / 6€ cal.</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Spumante Brut "Lumis" Magnum</div><div class="wine-producer">Il Colombaio — 80% Vernaccia 20% Chardonnay</div></div><div class="wine-price">54€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Altalanga Extra Brut</div><div class="wine-producer">Ettore Germano — 80% Pinot Nero 20% Chardonnay</div></div><div class="wine-price">40€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Trento DOC "Perlè"</div><div class="wine-producer">Ferrari — 100% Chardonnay</div></div><div class="wine-price">60€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Crémant d'Alsace Millesime Brut</div><div class="wine-producer">Dirler-Cadé — 30% Pinot Nero 45% Pinot Gris 25% Auxerrois</div></div><div class="wine-price">40€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Champagne "Zero"</div><div class="wine-producer">Tarlant — 32% Pinot Nero 32% Chardonnay 32% Meunier 4% Petit Meslier</div></div><div class="wine-price">95€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Chianti CS DOCG "Campale"</div><div class="wine-producer">Il Colombaio · 90% Sangiovese 10% Merlot</div></div><div class="wine-price">24€ / 6€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Chianti Classico</div><div class="wine-producer">Riecine · 100% Sangiovese</div></div><div class="wine-price">35€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Chianti CS Riserva DOCG "Il Priore"</div><div class="wine-producer">Il Colombaio · 90% Sangiovese 10% Canaiolo</div></div><div class="wine-price">36€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Chianti CL Riserva DOCG "Vigna Barbischio"</div><div class="wine-producer">Maurizio Alongi · 100% Sangiovese</div></div><div class="wine-price">48€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Rosso di Montalcino DOC</div><div class="wine-producer">Castello Tricerchi · 100% Sangiovese</div></div><div class="wine-price">32€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Brunello di Montalcino DOCG</div><div class="wine-producer">Castello Tricerchi · 100% Sangiovese</div></div><div class="wine-price">66€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Bolgheri Rosso DOC</div><div class="wine-producer">Le Macchiole · Merlot / Cab Franc / Cab Sauvignon / Syrah</div></div><div class="wine-price">38€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Cabernet Franc IGT "Bacicolo"</div><div class="wine-producer">Il Colombaio · 100% Cabernet Franc</div></div><div class="wine-price">80€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Nebbiolo Langhe DOC</div><div class="wine-producer">Ettore Germano · 100% Nebbiolo</div></div><div class="wine-price">26€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Ciliegiolo IGT</div><div class="wine-producer">Antonio Camillo · 100% Ciliegiolo</div></div><div class="wine-price">24€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Etna Rosso DOC</div><div class="wine-producer">Tenuta delle Terre Nere · 100% Nerello Mascalese</div></div><div class="wine-price">45€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Pinot Nero</div><div class="wine-producer">Panizzi · 100% Pinot Nero</div></div><div class="wine-price">28€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">IGT Toscana Rosso "Fonteuva"</div><div class="wine-producer">Il Colombaio · 100% Sangiovese</div></div><div class="wine-price">18€ / 5€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Moscato d'Asti DOCG "Camp Blanc"</div><div class="wine-producer">Emidio Vada · 100% Moscato Bianco di Cannelli</div></div><div class="wine-price">26€</div></div>
+              <div class="wine-item"><div class="wine-info"><div class="wine-name">Passito di Pantelleria DOC "Ben Ryé"</div><div class="wine-producer">Donna Fugata · 100% Zibibbo</div></div><div class="wine-price">65€</div></div>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- ROSATI -->
-      <div class="sub-accordion">
-        <button class="sub-trigger" onclick="toggleSub(this)" aria-expanded="false">
-          <span class="sub-trigger-icon">🌸</span>
-          <span class="sub-trigger-title">Rosati</span>
-          <span class="sub-trigger-chevron">▾</span>
-        </button>
-        <div class="sub-body">
-          <div class="sub-body-inner">
-            <div class="wine-list">
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Spumante Brut "Lumis" Rosè</div><div class="wine-producer">Il Colombaio — 100% Sangiovese</div></div><div class="wine-price">26€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Rosè IGT "Cremisi"</div><div class="wine-producer">Il Colombaio — 100% Sangiovese</div></div><div class="wine-price">24€ / 6€ cal.</div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ROSSI -->
-      <div class="sub-accordion">
-        <button class="sub-trigger" onclick="toggleSub(this)" aria-expanded="false">
-          <span class="sub-trigger-icon">🍷</span>
-          <span class="sub-trigger-title">Rossi</span>
-          <span class="sub-trigger-chevron">▾</span>
-        </button>
-        <div class="sub-body">
-          <div class="sub-body-inner">
-            <div class="wine-list">
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Chianti CS DOCG "Campale"</div><div class="wine-producer">Il Colombaio — 90% Sangiovese 10% Merlot</div></div><div class="wine-price">24€ / 6€ cal.</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Chianti Classico</div><div class="wine-producer">Riecine — 100% Sangiovese</div></div><div class="wine-price">35€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Chianti CS Riserva DOCG "Il Priore"</div><div class="wine-producer">Il Colombaio — 90% Sangiovese 10% Canaiolo</div></div><div class="wine-price">36€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Chianti CL Riserva "Vigna Barbischio"</div><div class="wine-producer">Maurizio Alongi — 100% Sangiovese</div></div><div class="wine-price">48€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Rosso di Montalcino DOC</div><div class="wine-producer">Castello Tricerchi — 100% Sangiovese</div></div><div class="wine-price">32€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Brunello di Montalcino DOCG</div><div class="wine-producer">Castello Tricerchi — 100% Sangiovese</div></div><div class="wine-price">66€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Bolgheri Rosso DOC</div><div class="wine-producer">Le Macchiole — Merlot, Cab. Franc, Cab. Sauvignon, Syrah</div></div><div class="wine-price">38€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Cabernet Franc IGT "Bacicolo"</div><div class="wine-producer">Il Colombaio — 100% Cabernet Franc</div></div><div class="wine-price">80€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Nebbiolo Langhe DOC</div><div class="wine-producer">Ettore Germano — 100% Nebbiolo</div></div><div class="wine-price">26€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Ciliegiolo IGT</div><div class="wine-producer">Antonio Camillo — 100% Ciliegiolo</div></div><div class="wine-price">24€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Etna Rosso DOC</div><div class="wine-producer">Tenuta delle Terre Nere — 100% Nerello Mascalese</div></div><div class="wine-price">45€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Pinot Nero</div><div class="wine-producer">Panizzi — 100% Pinot Nero</div></div><div class="wine-price">28€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">IGT Toscana "Fonteuva" Rosso</div><div class="wine-producer">Il Colombaio — 100% Sangiovese</div></div><div class="wine-price">18€ / 5€ cal.</div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- VINI DOLCI -->
-      <div class="sub-accordion">
-        <button class="sub-trigger" onclick="toggleSub(this)" aria-expanded="false">
-          <span class="sub-trigger-icon">🍯</span>
-          <span class="sub-trigger-title">Vini Dolci &amp; Passiti</span>
-          <span class="sub-trigger-chevron">▾</span>
-        </button>
-        <div class="sub-body">
-          <div class="sub-body-inner">
-            <div class="wine-list">
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Moscato d'Asti DOCG "Camp Blanc"</div><div class="wine-producer">Emidio Vada — 100% Moscato Bianco</div></div><div class="wine-price">26€</div></div>
-              <div class="wine-item"><div class="wine-info"><div class="wine-name">Passito di Pantelleria DOC "Ben Ryé"</div><div class="wine-producer">Donna Fugata — 100% Zibibbo</div></div><div class="wine-price">65€</div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- ===== BIRRE & BEVANDE ===== -->
+<!-- BIRRE -->
 <section class="menu-section" id="birre">
   <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
     <span class="section-icon">🍺</span>
     <span class="section-title">Birre &amp; Bevande</span>
-    <span class="section-count">Spina · Artigianali · Bottiglie · Soft</span>
+    <span class="section-badge">Birre · Soft Drink</span>
     <span class="section-chevron">▾</span>
   </button>
   <div class="section-body">
     <div class="section-body-inner">
-      <h3 class="sub-title">Birre alla Spina</h3>
+      <h3 class="sub-title">🍺 Birre alla Spina</h3>
       <div class="simple-list">
         <div class="simple-item"><span class="simple-item-name">Raffo Grezza — Grande</span><span class="simple-item-price">6€</span></div>
         <div class="simple-item"><span class="simple-item-name">Raffo Grezza — Piccola</span><span class="simple-item-price">4€</span></div>
       </div>
-      <h3 class="sub-title">Birrificio San Gimignano — Artigianali</h3>
+      <h3 class="sub-title">🍶 Birrificio San Gimignano</h3>
       <div class="simple-list">
-        <div class="simple-item"><span class="simple-item-name">Sigeric (Blonde)</span><span class="simple-item-price">6,5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Strade (Blanche)</span><span class="simple-item-price">6,5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Roma (IPA)</span><span class="simple-item-price">6,5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Divago (Amber)</span><span class="simple-item-price">6,5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Nikulas (Tripel)</span><span class="simple-item-price">6,5€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Sigeric — Blonde</span><span class="simple-item-price">6,5€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Strade — Blanche</span><span class="simple-item-price">6,5€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Roma — IPA</span><span class="simple-item-price">6,5€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Divago — Amber</span><span class="simple-item-price">6,5€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Nikulas — Tripel</span><span class="simple-item-price">6,5€</span></div>
       </div>
-      <h3 class="sub-title">Bottiglie 33cl</h3>
+      <h3 class="sub-title">🍶 Bottiglie 33cl</h3>
       <div class="simple-list">
         <div class="simple-item"><span class="simple-item-name">Menabrea</span><span class="simple-item-price">4€</span></div>
         <div class="simple-item"><span class="simple-item-name">Corona</span><span class="simple-item-price">4€</span></div>
@@ -740,14 +1040,13 @@ ul { list-style: none; }
         <div class="simple-item"><span class="simple-item-name">Tennent's</span><span class="simple-item-price">4,5€</span></div>
         <div class="simple-item"><span class="simple-item-name">Corona Analcolica</span><span class="simple-item-price">4€</span></div>
       </div>
-      <h3 class="sub-title">Acqua &amp; Bibite</h3>
+      <h3 class="sub-title">💧 Acqua &amp; Soft Drink</h3>
       <div class="simple-list">
-        <div class="simple-item"><span class="simple-item-name">Acqua 1L (nat/gas)</span><span class="simple-item-price">2,5€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Acqua ½L (nat/gas)</span><span class="simple-item-price">1,5€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Acqua 1 lt (nat / gas)</span><span class="simple-item-price">2,5€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Acqua ½ lt (nat / gas)</span><span class="simple-item-price">1,5€</span></div>
         <div class="simple-item"><span class="simple-item-name">Bibite Lattina</span><span class="simple-item-price">3€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Coca alla Spina grande / piccola</span><span class="simple-item-price">4,5€ / 3€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Lemon alla Spina grande / piccola</span><span class="simple-item-price">4,5€ / 3€</span></div>
-        <div class="simple-item"><span class="simple-item-name">Tonica alla Spina grande / piccola</span><span class="simple-item-price">4,5€ / 3€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Coca / Lemon / Tonica alla spina grande</span><span class="simple-item-price">4,5€</span></div>
+        <div class="simple-item"><span class="simple-item-name">Coca / Lemon / Tonica alla spina piccola</span><span class="simple-item-price">3€</span></div>
         <div class="simple-item"><span class="simple-item-name">Succhi di Frutta</span><span class="simple-item-price">4€</span></div>
         <div class="simple-item"><span class="simple-item-name">Tonica Dandy / Dandy Zero</span><span class="simple-item-price">4€</span></div>
         <div class="simple-item"><span class="simple-item-name">Ginger Beer Dandy</span><span class="simple-item-price">4€</span></div>
@@ -760,12 +1059,12 @@ ul { list-style: none; }
   </div>
 </section>
 
-<!-- ===== ALLERGENI ===== -->
+<!-- ALLERGENI -->
 <section class="menu-section" id="allergeni">
   <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
     <span class="section-icon">⚠️</span>
     <span class="section-title">Allergeni</span>
-    <span class="section-count">14 voci</span>
+    <span class="section-badge">14 voci</span>
     <span class="section-chevron">▾</span>
   </button>
   <div class="section-body">
@@ -792,18 +1091,35 @@ ul { list-style: none; }
 
 </main>
 
-<footer class="site-footer">
-  <strong>Poggio a Issi</strong> · Menù 2026<br>
-  <span style="margin-top:4px;display:block;">Immerso nel verde tra profumi di bosco · Poggibonsi, Toscana</span>
-</footer>
-
 <button class="scroll-top" id="scrollTopBtn" aria-label="Torna su" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script>
-// ===== ACCORDION LIVELLO 1 =====
+// ===== MEAL SWITCH =====
+function switchMeal(meal) {
+  // Update panels
+  document.querySelectorAll('.meal-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('panel-' + meal).classList.add('active');
+
+  // Update meal buttons
+  document.querySelectorAll('.meal-btn').forEach(b => b.classList.toggle('active', b.dataset.meal === meal));
+
+  // Update nav groups
+  document.querySelectorAll('.nav-group').forEach(g => {
+    g.classList.toggle('hidden', g.dataset.meal !== meal && g.dataset.meal !== undefined);
+  });
+
+  // Reset nav active
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+
+  // Scroll to top
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ===== ACCORDION LEVEL 1 =====
 function toggleSection(trigger) {
   const body = trigger.nextElementSibling;
   const isOpen = trigger.classList.contains('open');
+  // Close all open
   document.querySelectorAll('.section-trigger.open').forEach(t => {
     t.classList.remove('open');
     t.setAttribute('aria-expanded','false');
@@ -817,11 +1133,10 @@ function toggleSection(trigger) {
   }
 }
 
-// ===== ACCORDION LIVELLO 2 (vini) =====
+// ===== ACCORDION LEVEL 2 (wines) =====
 function toggleSub(trigger) {
   const body = trigger.nextElementSibling;
   const isOpen = trigger.classList.contains('open');
-  // Chiudi gli altri sub della stessa sezione
   const parent = trigger.closest('.section-body-inner');
   parent.querySelectorAll('.sub-trigger.open').forEach(t => {
     t.classList.remove('open');
@@ -836,8 +1151,6 @@ function toggleSub(trigger) {
 }
 
 // ===== NAV =====
-const sectionIds = ['condividi','primi','hamburger','pinse','griglia','insalatone','contorni','dolci','caffe','cocktail','gin','vini','birre','allergeni'];
-
 function goTo(id) {
   const el = document.getElementById(id);
   if (!el) return;
@@ -860,14 +1173,19 @@ document.querySelectorAll('[data-target]').forEach(btn => {
 // ===== SCROLL TOP =====
 const scrollBtn = document.getElementById('scrollTopBtn');
 window.addEventListener('scroll', () => {
-  scrollBtn.classList.toggle('visible', window.scrollY > 500);
+  scrollBtn.classList.toggle('visible', window.scrollY > 400);
 }, { passive: true });
 
 // ===== AUTO-HIGHLIGHT =====
+const allSectionIds = [
+  'll-condividi','ll-primi','ll-insalatone','ll-griglia','ll-contorni',
+  'condividi','primi','hamburger','pinse','griglia','insalatone','contorni',
+  'dolci','caffe','cocktail','gin','vini','birre','allergeni'
+];
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) setActiveTab(e.target.id); });
-}, { rootMargin: '-30% 0px -60% 0px' });
-sectionIds.forEach(id => { const el = document.getElementById(id); if(el) obs.observe(el); });
+}, { rootMargin: '-25% 0px -65% 0px' });
+allSectionIds.forEach(id => { const el = document.getElementById(id); if(el) obs.observe(el); });
 </script>
 </body>
 </html>
