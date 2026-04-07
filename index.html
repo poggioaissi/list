@@ -422,11 +422,9 @@ ul { list-style: none; }
     </span>
     <span class="nav-group hidden" data-meal="cena">
       <button class="nav-tab" data-target="condividi">Condividi</button>
-      <button class="nav-tab" data-target="primi">Primi Piatti</button>
       <button class="nav-tab" data-target="hamburger">Hamburger</button>
       <button class="nav-tab" data-target="pinse">Pinse</button>
       <button class="nav-tab" data-target="griglia">Griglia</button>
-      <button class="nav-tab" data-target="insalatone">Insalatone</button>
       <button class="nav-tab" data-target="contorni">Contorni</button>
     </span>
     <span class="nav-group hidden" data-meal="bevande">
@@ -575,26 +573,6 @@ ul { list-style: none; }
     </div>
   </section>
 
-  <section class="menu-section" id="primi">
-    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
-      <span class="section-icon">🍝</span>
-      <span class="section-title">Primi Piatti</span>
-      <span class="section-badge">5 piatti</span>
-      <span class="section-chevron">▾</span>
-    </button>
-    <div class="section-body">
-      <div class="section-body-inner">
-        <div class="dish-grid">
-          <div class="dish-card"><div class="dish-top"><span class="dish-name">Pici al Ragù Toscano</span><span class="dish-price">14€</span></div><p class="dish-desc">Pici fatti a mano con ragù di carne toscano</p><p class="dish-allergens">Allergeni: 1, 3, 8, 9</p></div>
-          <div class="dish-card"><div class="dish-top"><span class="dish-name">Gnocchi di Patate al Pesto Rosso</span><span class="dish-price">12€</span></div><p class="dish-desc">Gnocchi di patate con pesto di pomodori secchi e frutta secca</p><p class="dish-allergens">Allergeni: 1, 3, 7, 8, 9</p></div>
-          <div class="dish-card"><div class="dish-top"><span class="dish-name">Pappardelle al Cinghiale e Cioccolato</span><span class="dish-price">15€</span></div><p class="dish-desc">Pappardelle con ragù di cinghiale e un tocco di cioccolato fondente</p><p class="dish-allergens">Allergeni: 1, 3, 8, 9</p></div>
-          <div class="dish-card"><div class="dish-top"><span class="dish-name">Spaghettone al Pomodoro Fresco e Origano</span><span class="dish-price">12€</span></div><p class="dish-desc">Spaghettone con salsa di pomodoro fresco e origano aromatico</p><p class="dish-allergens">Allergeni: 1, 3, 8, 9</p></div>
-          <div class="dish-card"><div class="dish-top"><span class="dish-name">Gnudi di Ricotta e Spinaci</span><span class="dish-price">14€</span></div><p class="dish-desc">Con crema di pomodorini gialli e ricotta salata grattugiata</p><p class="dish-allergens">Allergeni: 1, 3, 7, 8, 9</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="menu-section" id="hamburger">
     <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
       <span class="section-icon">🍔</span>
@@ -676,25 +654,6 @@ ul { list-style: none; }
     </div>
   </section>
 
-  <section class="menu-section" id="insalatone">
-    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
-      <span class="section-icon">🥬</span>
-      <span class="section-title">Insalatone</span>
-      <span class="section-badge">4 insalatone</span>
-      <span class="section-chevron">▾</span>
-    </button>
-    <div class="section-body">
-      <div class="section-body-inner">
-        <div class="dish-grid">
-          <div class="dish-card"><div class="dish-top"><span class="dish-name">Insalatona del Poggio</span><span class="dish-price">10€</span></div><p class="dish-desc">Cavolo viola, pecorino, noci e miele</p></div>
-          <div class="dish-card"><div class="dish-top"><span class="dish-name">Insalatona di Tonno</span><span class="dish-price">10€</span></div><p class="dish-desc">Tonno, pomodorini, olive</p></div>
-          <div class="dish-card"><div class="dish-top"><span class="dish-name">Insalatona Greca</span><span class="dish-price">10€</span></div><p class="dish-desc">Feta, mais, olive e mozzarelline</p></div>
-          <div class="dish-card"><div class="dish-top"><span class="dish-name">Insalatona dell'Orto</span><span class="dish-price">10€</span></div><p class="dish-desc">Pomodorini, carote, cetrioli, olive e pane croccante</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="menu-section" id="contorni">
     <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
       <span class="section-icon">🥔</span>
@@ -714,8 +673,7 @@ ul { list-style: none; }
     </div>
   </section>
 
-</div>
-<div class="meal-panel" id="panel-bevande">
+</div><div class="meal-panel" id="panel-bevande">
 
   <section class="menu-section" id="caffe">
     <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
@@ -1180,7 +1138,7 @@ window.addEventListener('scroll', () => {
 // ===== AUTO-HIGHLIGHT =====
 const allSectionIds = [
   'll-condividi','ll-primi','ll-insalatone','ll-griglia','ll-contorni',
-  'condividi','primi','hamburger','pinse','griglia','insalatone','contorni',
+  'condividi','hamburger','pinse','griglia','contorni',
   'dolci','caffe','cocktail','gin','vini','birre','allergeni'
 ];
 const obs = new IntersectionObserver(entries => {
