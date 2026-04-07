@@ -419,6 +419,8 @@ ul { list-style: none; }
       <button class="nav-tab" data-target="ll-insalatone">Insalatone</button>
       <button class="nav-tab" data-target="ll-griglia">Griglia</button>
       <button class="nav-tab" data-target="ll-contorni">Contorni</button>
+      <button class="nav-tab" data-target="ll-dolci">Dolci</button>
+      <button class="nav-tab" data-target="ll-allergeni">⚠️</button>
     </span>
     <span class="nav-group hidden" data-meal="cena">
       <button class="nav-tab" data-target="condividi">Condividi</button>
@@ -426,6 +428,8 @@ ul { list-style: none; }
       <button class="nav-tab" data-target="pinse">Pinse</button>
       <button class="nav-tab" data-target="griglia">Griglia</button>
       <button class="nav-tab" data-target="contorni">Contorni</button>
+      <button class="nav-tab" data-target="dolci">Dolci</button>
+      <button class="nav-tab" data-target="allergeni">⚠️</button>
     </span>
     <span class="nav-group hidden" data-meal="bevande">
       <button class="nav-tab" data-target="caffe">Caffè</button>
@@ -434,8 +438,6 @@ ul { list-style: none; }
       <button class="nav-tab" data-target="vini">Vini</button>
       <button class="nav-tab" data-target="birre">Birre</button>
     </span>
-    <button class="nav-tab" data-target="dolci">Dolci</button>
-    <button class="nav-tab" data-target="allergeni">⚠️</button>
   </div>
 </nav>
 
@@ -538,6 +540,54 @@ ul { list-style: none; }
           <div class="simple-item"><span class="simple-item-name">Patate fritte</span><span class="simple-item-price">5€</span></div>
           <div class="simple-item"><span class="simple-item-name">Insalata mista</span><span class="simple-item-price">5€</span></div>
           <div class="simple-item"><span class="simple-item-name">Spinacino saltato</span><span class="simple-item-price">5€</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-section" id="ll-dolci">
+    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
+      <span class="section-icon">🍮</span>
+      <span class="section-title">Dolci</span>
+      <span class="section-badge">4 dolci</span>
+      <span class="section-chevron">▾</span>
+    </button>
+    <div class="section-body">
+      <div class="section-body-inner">
+        <div class="dish-grid">
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Tiramisù del Poggio</span><span class="dish-price">6€</span></div><p class="dish-desc">Il nostro tiramisù della casa</p><p class="dish-allergens">Allergeni: 1, 3, 7</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Tortino Pere e Cannella</span><span class="dish-price">6€</span></div><p class="dish-desc">Con salsa al caramello salato</p><p class="dish-allergens">Allergeni: 1, 3, 7</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Latte in Piedi</span><span class="dish-price">6€</span></div><p class="dish-desc">Tradizionale budino di crema alla vaniglia</p><p class="dish-allergens">Allergeni: 3, 7</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Cremoso al Mango</span><span class="dish-price">6€</span></div><p class="dish-desc">Cremoso al mango con croccante alle mandorle</p><p class="dish-allergens">Allergeni: 3, 7</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-section" id="ll-allergeni">
+    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
+      <span class="section-icon">⚠️</span>
+      <span class="section-title">Allergeni</span>
+      <span class="section-badge">14 voci</span>
+      <span class="section-chevron">▾</span>
+    </button>
+    <div class="section-body">
+      <div class="section-body-inner">
+        <div class="allergen-grid">
+          <div class="allergen-item"><span class="allergen-num">1</span>Cereali contenenti glutine e derivati</div>
+          <div class="allergen-item"><span class="allergen-num">2</span>Crostacei e prodotti derivati</div>
+          <div class="allergen-item"><span class="allergen-num">3</span>Uova e prodotti a base di uova</div>
+          <div class="allergen-item"><span class="allergen-num">4</span>Pesce e prodotti derivati</div>
+          <div class="allergen-item"><span class="allergen-num">5</span>Arachidi e prodotti derivati</div>
+          <div class="allergen-item"><span class="allergen-num">6</span>Soia e prodotti derivati</div>
+          <div class="allergen-item"><span class="allergen-num">7</span>Latte e derivati (incluso lattosio)</div>
+          <div class="allergen-item"><span class="allergen-num">8</span>Frutta a guscio</div>
+          <div class="allergen-item"><span class="allergen-num">9</span>Sedano e prodotti derivati</div>
+          <div class="allergen-item"><span class="allergen-num">10</span>Senape e prodotti derivati</div>
+          <div class="allergen-item"><span class="allergen-num">11</span>Semi di sesamo e derivati</div>
+          <div class="allergen-item"><span class="allergen-num">12</span>Anidride solforosa e solfiti</div>
+          <div class="allergen-item"><span class="allergen-num">13</span>Lupini e prodotti derivati</div>
+          <div class="allergen-item"><span class="allergen-num">14</span>Molluschi e prodotti derivati</div>
         </div>
       </div>
     </div>
@@ -673,7 +723,56 @@ ul { list-style: none; }
     </div>
   </section>
 
-</div><div class="meal-panel" id="panel-bevande">
+  <section class="menu-section" id="dolci">
+    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
+      <span class="section-icon">🍮</span>
+      <span class="section-title">Dolci</span>
+      <span class="section-badge">4 dolci</span>
+      <span class="section-chevron">▾</span>
+    </button>
+    <div class="section-body">
+      <div class="section-body-inner">
+        <div class="dish-grid">
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Tiramisù del Poggio</span><span class="dish-price">6€</span></div><p class="dish-desc">Il nostro tiramisù della casa</p><p class="dish-allergens">Allergeni: 1, 3, 7</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Tortino Pere e Cannella</span><span class="dish-price">6€</span></div><p class="dish-desc">Con salsa al caramello salato</p><p class="dish-allergens">Allergeni: 1, 3, 7</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Latte in Piedi</span><span class="dish-price">6€</span></div><p class="dish-desc">Tradizionale budino di crema alla vaniglia</p><p class="dish-allergens">Allergeni: 3, 7</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Cremoso al Mango</span><span class="dish-price">6€</span></div><p class="dish-desc">Cremoso al mango con croccante alle mandorle</p><p class="dish-allergens">Allergeni: 3, 7</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-section" id="allergeni">
+    <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
+      <span class="section-icon">⚠️</span>
+      <span class="section-title">Allergeni</span>
+      <span class="section-badge">14 voci</span>
+      <span class="section-chevron">▾</span>
+    </button>
+    <div class="section-body">
+      <div class="section-body-inner">
+        <div class="allergen-grid">
+          <div class="allergen-item"><span class="allergen-num">1</span>Cereali contenenti glutine e derivati</div>
+          <div class="allergen-item"><span class="allergen-num">2</span>Crostacei e prodotti derivati</div>
+          <div class="allergen-item"><span class="allergen-num">3</span>Uova e prodotti a base di uova</div>
+          <div class="allergen-item"><span class="allergen-num">4</span>Pesce e prodotti derivati</div>
+          <div class="allergen-item"><span class="allergen-num">5</span>Arachidi e prodotti derivati</div>
+          <div class="allergen-item"><span class="allergen-num">6</span>Soia e prodotti derivati</div>
+          <div class="allergen-item"><span class="allergen-num">7</span>Latte e derivati (incluso lattosio)</div>
+          <div class="allergen-item"><span class="allergen-num">8</span>Frutta a guscio</div>
+          <div class="allergen-item"><span class="allergen-num">9</span>Sedano e prodotti derivati</div>
+          <div class="allergen-item"><span class="allergen-num">10</span>Senape e prodotti derivati</div>
+          <div class="allergen-item"><span class="allergen-num">11</span>Semi di sesamo e derivati</div>
+          <div class="allergen-item"><span class="allergen-num">12</span>Anidride solforosa e solfiti</div>
+          <div class="allergen-item"><span class="allergen-num">13</span>Lupini e prodotti derivati</div>
+          <div class="allergen-item"><span class="allergen-num">14</span>Molluschi e prodotti derivati</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<div class="meal-panel" id="panel-bevande">
 
   <section class="menu-section" id="caffe">
     <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
@@ -788,11 +887,11 @@ ul { list-style: none; }
         </div>
 
         <h3 class="sub-title">🍃 Analcolici</h3>
-        <div class="simple-list">
-          <div class="simple-item"><span class="simple-item-name">Sprissi Zero — Bitter Martini Vibrante, soda pompelmo</span><span class="simple-item-price">7€</span></div>
-          <div class="simple-item"><span class="simple-item-name">Il Floreale — Bitter Martini Floreale, mela verde, soda</span><span class="simple-item-price">7€</span></div>
-          <div class="simple-item"><span class="simple-item-name">Il Fruttato — Arancia, ananas, granatina</span><span class="simple-item-price">6€</span></div>
-          <div class="simple-item"><span class="simple-item-name">Mojito Zero — Lime, menta, ginger beer, soda</span><span class="simple-item-price">8€</span></div>
+        <div class="dish-grid">
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Sprissi Zero</span><span class="dish-price">7€</span></div><p class="dish-desc">Bitter Martini Vibrante, soda pompelmo</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Il Floreale</span><span class="dish-price">7€</span></div><p class="dish-desc">Bitter Martini Floreale, mela verde, soda</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Il Fruttato</span><span class="dish-price">6€</span></div><p class="dish-desc">Arancia, ananas, granatina</p></div>
+          <div class="dish-card"><div class="dish-top"><span class="dish-name">Mojito Zero</span><span class="dish-price">8€</span></div><p class="dish-desc">Lime, menta, ginger beer, soda</p></div>
         </div>
       </div>
     </div>
@@ -1000,55 +1099,7 @@ ul { list-style: none; }
     </div>
   </section>
 
-</div><section class="menu-section" id="dolci">
-  <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
-    <span class="section-icon">🍮</span>
-    <span class="section-title">Dolci</span>
-    <span class="section-badge">4 dolci</span>
-    <span class="section-chevron">▾</span>
-  </button>
-  <div class="section-body">
-    <div class="section-body-inner">
-      <div class="dish-grid">
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Tiramisù del Poggio</span><span class="dish-price">6€</span></div><p class="dish-desc">Il nostro tiramisù della casa</p><p class="dish-allergens">Allergeni: 1, 3, 7</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Tortino Pere e Cannella</span><span class="dish-price">6€</span></div><p class="dish-desc">Con salsa al caramello salato</p><p class="dish-allergens">Allergeni: 1, 3, 7</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Latte in Piedi</span><span class="dish-price">6€</span></div><p class="dish-desc">Tradizionale budino di crema alla vaniglia</p><p class="dish-allergens">Allergeni: 3, 7</p></div>
-        <div class="dish-card"><div class="dish-top"><span class="dish-name">Cremoso al Mango</span><span class="dish-price">6€</span></div><p class="dish-desc">Cremoso al mango con croccante alle mandorle</p><p class="dish-allergens">Allergeni: 3, 7</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="menu-section" id="allergeni">
-  <button class="section-trigger" onclick="toggleSection(this)" aria-expanded="false">
-    <span class="section-icon">⚠️</span>
-    <span class="section-title">Allergeni</span>
-    <span class="section-badge">14 voci</span>
-    <span class="section-chevron">▾</span>
-  </button>
-  <div class="section-body">
-    <div class="section-body-inner">
-      <div class="allergen-grid">
-        <div class="allergen-item"><span class="allergen-num">1</span>Cereali contenenti glutine e derivati</div>
-        <div class="allergen-item"><span class="allergen-num">2</span>Crostacei e prodotti derivati</div>
-        <div class="allergen-item"><span class="allergen-num">3</span>Uova e prodotti a base di uova</div>
-        <div class="allergen-item"><span class="allergen-num">4</span>Pesce e prodotti derivati</div>
-        <div class="allergen-item"><span class="allergen-num">5</span>Arachidi e prodotti derivati</div>
-        <div class="allergen-item"><span class="allergen-num">6</span>Soia e prodotti derivati</div>
-        <div class="allergen-item"><span class="allergen-num">7</span>Latte e derivati (incluso lattosio)</div>
-        <div class="allergen-item"><span class="allergen-num">8</span>Frutta a guscio</div>
-        <div class="allergen-item"><span class="allergen-num">9</span>Sedano e prodotti derivati</div>
-        <div class="allergen-item"><span class="allergen-num">10</span>Senape e prodotti derivati</div>
-        <div class="allergen-item"><span class="allergen-num">11</span>Semi di sesamo e derivati</div>
-        <div class="allergen-item"><span class="allergen-num">12</span>Anidride solforosa e solfiti</div>
-        <div class="allergen-item"><span class="allergen-num">13</span>Lupini e prodotti derivati</div>
-        <div class="allergen-item"><span class="allergen-num">14</span>Molluschi e prodotti derivati</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
+</div></main>
 
 <button class="scroll-top" id="scrollTopBtn" aria-label="Torna su" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
@@ -1137,9 +1188,9 @@ window.addEventListener('scroll', () => {
 
 // ===== AUTO-HIGHLIGHT =====
 const allSectionIds = [
-  'll-condividi','ll-primi','ll-insalatone','ll-griglia','ll-contorni',
-  'condividi','hamburger','pinse','griglia','contorni',
-  'dolci','caffe','cocktail','gin','vini','birre','allergeni'
+  'll-condividi','ll-primi','ll-insalatone','ll-griglia','ll-contorni','ll-dolci','ll-allergeni',
+  'condividi','hamburger','pinse','griglia','contorni','dolci','allergeni',
+  'caffe','cocktail','gin','vini','birre'
 ];
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) setActiveTab(e.target.id); });
