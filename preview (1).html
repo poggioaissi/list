@@ -1079,4 +1079,298 @@ function smoothLangChange(lang){
 }
 </script>
 
+    <script>
+(function () {
+  const I18N = {
+    llCondividi: {
+      it: "Condividi",
+      en: "To Share",
+      fr: "Entrées",
+      es: "Entradas",
+      de: "Vorspeisen"
+    },
+    llPrimi: {
+      it: "Primi",
+      en: "Pasta & First Courses",
+      fr: "Pâtes & Premiers Plats",
+      es: "Pasta & Primeros Platos",
+      de: "Pasta & Erste Gänge"
+    },
+    llInsalatone: {
+      it: "Insalatone",
+      en: "Big Salads",
+      fr: "Grandes Salades",
+      es: "Ensaladas",
+      de: "Große Salate"
+    },
+    llGriglia: {
+      it: "Griglia",
+      en: "From the Grill",
+      fr: "Du Gril",
+      es: "De la Parrilla",
+      de: "Vom Grill"
+    },
+    llContorni: {
+      it: "Contorni",
+      en: "Sides",
+      fr: "Accompagnements",
+      es: "Guarniciones",
+      de: "Beilagen"
+    },
+    llDolci: {
+      it: "Dolci",
+      en: "Desserts",
+      fr: "Desserts",
+      es: "Postres",
+      de: "Desserts"
+    },
+    llAllergeni: {
+      it: "Allergeni",
+      en: "Allergens",
+      fr: "Allergènes",
+      es: "Alérgenos",
+      de: "Allergene"
+    },
+
+    condividi: {
+      it: "Condividi",
+      en: "To Share",
+      fr: "À Partager",
+      es: "Para Compartir",
+      de: "Zum Teilen"
+    },
+    hamburger: {
+      it: "Hamburger",
+      en: "Burgers",
+      fr: "Burgers",
+      es: "Hamburguesas",
+      de: "Burger"
+    },
+    pinse: {
+      it: "Pinse",
+      en: "Pinsa",
+      fr: "Pinsa",
+      es: "Pinsa",
+      de: "Pinsa"
+    },
+    griglia: {
+      it: "Griglia",
+      en: "From the Grill",
+      fr: "Du Gril",
+      es: "De la Parrilla",
+      de: "Vom Grill"
+    },
+    contorni: {
+      it: "Contorni",
+      en: "Sides",
+      fr: "Accompagnements",
+      es: "Guarniciones",
+      de: "Beilagen"
+    },
+    dolci: {
+      it: "Dolci",
+      en: "Desserts",
+      fr: "Desserts",
+      es: "Postres",
+      de: "Desserts"
+    },
+    allergeni: {
+      it: "Allergeni",
+      en: "Allergens",
+      fr: "Allergènes",
+      es: "Alérgenos",
+      de: "Allergene"
+    },
+    caffe: {
+      it: "Caffetteria & Digestivi",
+      en: "Coffee & Digestifs",
+      fr: "Café & Digestifs",
+      es: "Café & Digestivos",
+      de: "Kaffee & Digestifs"
+    },
+    cocktail: {
+      it: "Cocktail",
+      en: "Cocktails",
+      fr: "Cocktails",
+      es: "Cócteles",
+      de: "Cocktails"
+    },
+    gin: {
+      it: "Gin Tonic — Selezione del Gingegnere",
+      en: "Gin & Tonic — Gingegnere's Selection",
+      fr: "Gin Tonic — Sélection du Gingegnere",
+      es: "Gin Tonic — Selección del Gingegnere",
+      de: "Gin Tonic — Auswahl des Gingegnere"
+    },
+    vini: {
+      it: "Carta dei Vini",
+      en: "Wine List",
+      fr: "Carte des Vins",
+      es: "Carta de Vinos",
+      de: "Weinkarte"
+    },
+    birre: {
+      it: "Birre & Bevande",
+      en: "Beers & Beverages",
+      fr: "Bières & Boissons",
+      es: "Cervezas & Bebidas",
+      de: "Biere & Getränke"
+    }
+  };
+
+  const tabMap = {
+    "ll-condividi": "llCondividi",
+    "ll-primi": "llPrimi",
+    "ll-insalatone": "llInsalatone",
+    "ll-griglia": "llGriglia",
+    "ll-contorni": "llContorni",
+    "ll-dolci": "llDolci",
+    "ll-allergeni": "llAllergeni",
+
+    "condividi": "condividi",
+    "hamburger": "hamburger",
+    "pinse": "pinse",
+    "griglia": "griglia",
+    "contorni": "contorni",
+    "dolci": "dolci",
+    "allergeni": "allergeni",
+    "caffe": "caffe",
+    "cocktail": "cocktail",
+    "gin": "gin",
+    "vini": "vini",
+    "birre": "birre"
+  };
+
+  function buildLangSpans(texts) {
+    return `
+      <span class="lang-it">${texts.it || ""}</span>
+      <span class="lang-en">${texts.en || ""}</span>
+      <span class="lang-fr">${texts.fr || ""}</span>
+      <span class="lang-es">${texts.es || ""}</span>
+      <span class="lang-de">${texts.de || ""}</span>
+    `;
+  }
+
+  function patchSectionHeading(sectionId, key) {
+    const section = document.getElementById(sectionId);
+    if (!section || !I18N[key]) return;
+
+    const h3 = section.querySelector(".section-copy h3");
+    if (h3) {
+      h3.innerHTML = buildLangSpans(I18N[key]);
+    }
+  }
+
+  function patchNavTab(targetId, key) {
+    const tab = document.querySelector(`.nav-tab[data-target="${targetId}"]`);
+    if (!tab || !I18N[key]) return;
+    tab.innerHTML = buildLangSpans(I18N[key]);
+  }
+
+  function patchDataI18nButtons(lang) {
+    const labels = {
+      it: { hamburger: "Hamburger", pinse: "Pinse", cocktail: "Cocktail", gin: "Gin Tonic" },
+      en: { hamburger: "Burgers", pinse: "Pinsa", cocktail: "Cocktails", gin: "Gin & Tonic" },
+      fr: { hamburger: "Burgers", pinse: "Pinsa", cocktail: "Cocktails", gin: "Gin Tonic" },
+      es: { hamburger: "Hamburguesas", pinse: "Pinsa", cocktail: "Cócteles", gin: "Gin Tonic" },
+      de: { hamburger: "Burger", pinse: "Pinsa", cocktail: "Cocktails", gin: "Gin Tonic" }
+    };
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.dataset.i18n;
+      if (labels[lang] && labels[lang][key]) {
+        el.textContent = labels[lang][key];
+      }
+    });
+  }
+
+  function syncLangButtons(lang) {
+    document.querySelectorAll(".pill-btn[data-lang]").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+  }
+
+  function patchAllCategoryTexts() {
+    patchSectionHeading("ll-condividi", "llCondividi");
+    patchSectionHeading("ll-primi", "llPrimi");
+    patchSectionHeading("ll-insalatone", "llInsalatone");
+    patchSectionHeading("ll-griglia", "llGriglia");
+    patchSectionHeading("ll-contorni", "llContorni");
+    patchSectionHeading("ll-dolci", "llDolci");
+    patchSectionHeading("ll-allergeni", "llAllergeni");
+
+    patchSectionHeading("condividi", "condividi");
+    patchSectionHeading("hamburger", "hamburger");
+    patchSectionHeading("pinse", "pinse");
+    patchSectionHeading("griglia", "griglia");
+    patchSectionHeading("contorni", "contorni");
+    patchSectionHeading("dolci", "dolci");
+    patchSectionHeading("allergeni", "allergeni");
+    patchSectionHeading("caffe", "caffe");
+    patchSectionHeading("cocktail", "cocktail");
+    patchSectionHeading("gin", "gin");
+    patchSectionHeading("vini", "vini");
+    patchSectionHeading("birre", "birre");
+
+    patchNavTab("ll-condividi", "llCondividi");
+    patchNavTab("ll-primi", "llPrimi");
+    patchNavTab("ll-insalatone", "llInsalatone");
+    patchNavTab("ll-griglia", "llGriglia");
+    patchNavTab("ll-contorni", "llContorni");
+    patchNavTab("ll-dolci", "llDolci");
+    patchNavTab("ll-allergeni", "llAllergeni");
+
+    patchNavTab("condividi", "condividi");
+    patchNavTab("griglia", "griglia");
+    patchNavTab("contorni", "contorni");
+    patchNavTab("dolci", "dolci");
+    patchNavTab("allergeni", "allergeni");
+    patchNavTab("caffe", "caffe");
+    patchNavTab("vini", "vini");
+    patchNavTab("birre", "birre");
+  }
+
+  function getCurrentLang() {
+    const saved = localStorage.getItem("lang") || localStorage.getItem("poggio-lang");
+    if (saved && ["it","en","fr","es","de"].includes(saved)) return saved;
+    let lang = (navigator.language || "en").slice(0,2);
+    if (!["it","en","fr","es","de"].includes(lang)) lang = "en";
+    return lang;
+  }
+
+  function applyLanguage(lang) {
+    document.documentElement.setAttribute("data-lang", lang);
+    localStorage.setItem("lang", lang);
+    localStorage.setItem("poggio-lang", lang);
+    patchDataI18nButtons(lang);
+    syncLangButtons(lang);
+  }
+
+  const originalSwitchLang = window.switchLang;
+  window.switchLang = function(lang) {
+    applyLanguage(lang);
+    if (typeof originalSwitchLang === "function") {
+      try { originalSwitchLang(lang); } catch(e) {}
+    }
+  };
+
+  const originalSmoothLangChange = window.smoothLangChange;
+  window.smoothLangChange = function(lang) {
+    document.body.style.opacity = 0.6;
+    setTimeout(() => {
+      applyLanguage(lang);
+      if (typeof originalSwitchLang === "function") {
+        try { originalSwitchLang(lang); } catch(e) {}
+      }
+      document.body.style.opacity = 1;
+    }, 120);
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    patchAllCategoryTexts();
+    applyLanguage(getCurrentLang());
+  });
+})();
+</script>
+
 </body></html>
